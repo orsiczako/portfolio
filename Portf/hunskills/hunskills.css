@@ -1,0 +1,741 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y:auto;
+    background-color: #e5d7ebd6;
+
+    
+}
+
+.main {
+    position: relative; 
+    height: 480vh;
+}
+.upperbuttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px;
+    display: flex; 
+    align-items: center;
+    
+}
+
+.line {
+    width: 100vw;
+    height: 83px; 
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    z-index:100;
+}
+.imprima-regular {
+    font-family: "Imprima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+.myname {
+    font-family: 'Imprima',sans-serif;
+    line-height: 1em;
+    font-size: 17px;
+    font-weight:bold;
+    color: #000000;
+    
+    position: fixed; 
+    top: -16px; 
+    left: 6px;  
+    z-index: 1000; 
+    margin-right: 1264px;
+    
+    margin-top: 19px;
+    background-color: #767ff4;
+    transition: transform 0.3s ease;
+    border: 6px solid;
+    border-color: #e5d7eb;
+    border-radius: 60px;
+    padding: 15px 35px;
+    
+    
+}
+.myname:hover {
+    transform: scale(0.95); /* Shrink the element slightly on hover */
+}
+
+
+
+
+.ubotton {
+    font-family: 'Imprima',sans-serif;
+    background-color: #767ff4;
+    color: #170073;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 6px 3px;
+    cursor: pointer;
+    border: none;
+    border-radius: 17px;
+    margin-right: 12px; 
+    margin-left:63px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.ubotton:hover {
+    background-color: #e5d7ebd6;
+    color: #170073;
+}
+
+
+.gifhome {
+    width: 50px; 
+    height: 50px;
+    margin-right: 50px; 
+    vertical-align: middle; 
+    margin-left:110px;
+    background-color: transparent 
+    
+}
+
+.upperbuttonicons {
+    position: fixed;
+    top: 3px; 
+    right:140px; 
+   
+    z-index: 900;
+    
+    padding: 10px;
+    
+    
+}
+.gifhome#contactIcon {
+    margin-right: 65px; 
+}
+.gifhome#homeIcon {
+    margin-right: 55px; 
+}
+
+.gifhome#skillsIcon {
+    margin-right: 100px; 
+    
+
+}
+#myskills{
+    font-family: 'Imprima',sans-serif;
+    background-color:#e5d7ebd6;
+    color: #170073;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 6px 3px;
+    cursor: pointer;
+    border: none;
+    border-radius: 17px;
+    margin-right: 15px; 
+    margin-left:63px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+}
+#myskills:hover{
+    background-color: #767ff4;
+    
+    color: #170073;
+
+}
+#hungaryFlag {
+    background: transparent; 
+    border: none;
+    width: 45px;
+    height: 40px;
+    position: fixed;
+    top:22px;
+    
+    left:170px;
+    transition: transform 0.3s ease;
+    z-index:1000;
+    
+}
+#hungaryFlag:hover {
+    transform: scale(1.2); /* Scale the button by 10% on hover */
+}
+#git{
+    background: transparent; 
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:770px;
+    position:absolute;
+    right:650px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+    display:none;
+
+}
+#git:hover {
+    transform: scale(1.2);
+}
+#lin{
+    background: transparent; 
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:770px;
+    position:absolute;
+    right:585px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+    display:none;
+
+}
+#lin:hover{
+    transform: scale(1.2);
+}
+#englishFlag {
+    background: transparent; 
+    border: none;
+    width: 45px;
+    height: 40px;
+    position: fixed;
+    top:22px;
+    
+    left:270px;
+    transition: transform 0.3s ease;
+    z-index:1000;
+    
+    
+}
+#englishFlag:hover {
+    transform: scale(1.2); /* Scale the button by 10% on hover */
+}
+
+#en{
+    font-family:'Times New Roman';
+    background: transparent; 
+    border: none;
+    font-size:20px;
+    position: absolute;
+    top:30px;
+    
+    left:330px;
+    position:fixed;
+    z-index: 300;
+    
+    color: #170073;
+
+}
+#hu{
+    font-family:'Times New Roman';
+    background: transparent; 
+    border: none;
+    font-size:20px;
+    position: fixed;
+    top:30px;
+    z-index:300;
+    left:225px;
+    color: #170073;
+
+}
+
+.cyber{
+    background:transparent;
+    border:none;
+    
+    position:absolute;
+    top:450px;
+    left:50px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+
+}
+
+.cyber:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+}
+#cyb{
+    height:370px;
+    width:370px;
+    animation: moveBadge 1.3s ease-in-out infinite alternate;
+    
+}
+.java{
+    background:transparent;
+    border:none;
+    
+    position:absolute;
+    top:1060px;
+    left:50px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+    
+}
+#javaa{
+    height:370px;
+    width:370px;
+    animation: moveBadge 1.3s ease-in-out infinite alternate;
+
+}
+.java:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+    
+}
+.python{
+    background:transparent;
+    border:none;
+    
+    position:absolute;
+    top:1700px;
+    left:50px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+    
+}
+#pythonn{
+    height:370px;
+    width:370px;
+    animation: moveBadge 1.3s ease-in-out infinite alternate;
+
+}
+.python:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+    
+}
+.cssp{
+    background:transparent;
+    border:none;
+    
+    position:absolute;
+    top:2360px;
+    left:50px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+    
+}
+#csspic{
+    height:230px;
+    width:230px;
+    animation: moveBadge 1.3s ease-in-out infinite alternate;
+
+}
+.csspic:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+    
+}
+.cybtext{
+    font-family:'Dosis',sans-serif;
+    background: transparent; 
+    border: none;
+    font-size:28px;
+    left:-200px;
+    position:absolute;
+    top:420px;
+    white-space: nowrap;
+    
+    
+    
+
+}
+.mybadges{
+    font-family:'Imprima', sans-serif;
+    background: transparent; 
+    border: none;
+    font-size:60px;
+    position: absolute;
+    top:80px;
+    white-space: nowrap;
+    background-color: #767ff4;
+    left:-580px;
+    padding: 30px 50px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    color: #170073;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+    z-index:100;
+    
+    
+}
+
+.mybadges:hover {
+    transform: scale(1.05); 
+}
+#picc{
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    position:absolute;
+    right:150px;
+    top:780px;
+    transition: transform 0.15s ease;
+    transform: rotate(10deg);
+
+}
+#picc:hover {
+    animation: jigglewiggle 0.5s forwards; /* Apply the jiggle animation on hover */
+}
+
+@keyframes jigglewiggle {
+    0% { transform: rotate(0); }
+    20% { transform: rotate(-5deg); }
+    40% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    80% { transform: rotate(5deg); }
+    100% { transform: rotate(0); }
+    
+}
+#penn {
+    background: transparent;
+    border: none;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 25px;
+    right:480px;
+    transition: transform 7s ease;
+    transform: rotate(180deg) translateY(0%); 
+    
+    animation: slide 4s infinite;
+    
+   
+}
+
+
+@keyframes slide {
+    0%, 100% { transform: translateY(46px); } 
+    50% { transform: translateY(0); }
+    
+}
+@keyframes moveBadge {
+0% {
+    transform: scale(1); /* Normal meret */
+}
+100% {
+    transform: scale(1.05); /* Kicsit nagyobb meret */
+}
+}
+
+.cybersec{
+    background:transparent;
+    border:none;
+    font-size:60px;
+    font-weight: bold;
+    position:absolute;
+    top:260px;
+    left:-560px;
+    color: #1b6294;
+    white-space:nowrap;
+    
+}
+
+#lineer{
+    height: 100px;
+    width: 850px;
+    position:absolute;
+    top:350px;
+    left:40px;
+
+}
+
+
+.javacert{
+    background:transparent;
+    border:none;
+    font-size:60px;
+    font-weight: bold;
+    position:absolute;
+    top:860px;
+    left:-560px;
+    color: #1b6294;
+    white-space:nowrap;
+}
+#lineer1{
+    height: 100px;
+    width: 850px;
+    position:absolute;
+    top:950px;
+    right:485px;
+
+}
+.pythoncert{
+    background:transparent;
+    border:none;
+    font-size:60px;
+    font-weight: bold;
+    position:absolute;
+    top:1475px;
+    left:-560px;
+    color: #1b6294;
+    white-space:nowrap;
+}
+#lineer2{
+    height: 100px;
+    width: 850px;
+    position:absolute;
+    top:1570px;
+    right:485px;
+
+}
+.pythontext{
+    font-family:'Dosis',sans-serif;
+    background: transparent; 
+    border: none;
+    font-size:30px;
+    left:-180px;
+    position:absolute;
+    top:1660px;
+    white-space: nowrap;
+    z-index:0;
+    
+}
+#javatext1{
+    font-family:'Dosis',sans-serif;
+    font-size:30px;
+    position:absolute;
+    top:1040px;
+    white-space: nowrap;
+    z-index:0;
+    left:-180px;
+    
+}
+#lineer3{
+    height: 100px;
+    width: 750px;
+    position:absolute;
+    top:2250px;
+    right:585px;
+
+}
+
+.cssskill{
+    background:transparent;
+    border:none;
+    font-size:60px;
+    font-weight: bold;
+    position:absolute;
+    top:2155px;
+    left:-560px;
+    color: #1b6294;
+    white-space:nowrap;
+
+
+}
+
+.htmlp{
+    background:transparent;
+    border:none;
+    
+    position:absolute;
+    top:2360px;
+    left:500px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+    
+}
+#htmlpic{
+    height:230px;
+    width:230px;
+    animation: moveBadge 1.3s ease-in-out infinite alternate;
+
+}
+.htmlpic:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+    
+}
+
+.webicon{
+    position:absolute;
+    background:transparent;
+    border:none;
+    top:1140px;
+    width:450px;
+    height:450px;
+    right:70px;
+
+}
+#portfolioskills1{
+    font-family:'Dosis',sans-serif;
+    font-size:25px;
+    position:absolute;
+    top:2670px;
+    white-space: nowrap;
+    text-align:center;
+    left:-570px;
+    border-radius:20px;
+    border:20px dashed #767ff4;
+    padding:20px;
+}
+
+#cybertransfer{
+    background:transparent;
+    border:none;
+    position:fixed;
+    cursor:pointer;
+    height:75px;
+    width:75px;
+    top:130px;
+    z-index: 10;
+    right:5px;
+    transition:transform 0.3s ease;
+
+}
+#cybertransfter:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+
+}
+
+
+#javatransfer{
+    background:transparent;
+    border:none;
+    position:fixed;
+    cursor:pointer;
+    height:75px;
+    width:75px;
+    top:210px;
+    right:5px;
+    transition:transform 0.3s ease;
+    z-index: 10;
+  
+}
+
+#javatransfer:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+}
+
+
+#pythontransfer{
+    background:transparent;
+    border:none;
+    position:fixed;
+    cursor:pointer;
+    height:75px;
+    width:75px;
+    top:290px;
+    right:5px;
+    transition:transform 0.3s ease;
+    z-index: 10;
+
+  
+}
+#pythontransfer:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+
+}
+#htmltransfer{
+    background:transparent;
+    border:none;
+    position:fixed;
+    cursor:pointer;
+    height:70px;
+    width:70px;
+    top:453px;
+    right:5px;
+    transition:transform 0.3s ease;
+    z-index: 10;
+}
+#htmltransfer:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+}
+#csstransfer{
+    background:transparent;
+    border:none;
+    position:fixed;
+    cursor:pointer;
+    height:70px;
+    width:70px;
+    top:373px;
+    right:5px;
+    transition:transform 0.3s ease;
+    z-index: 10;
+
+  
+}
+#csstransfer:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+}
+#azurepic{
+    background:transparent;
+    border:none;
+    position:absolute;
+    cursor:pointer;
+    height:350px;
+    width:350px;
+    top:3400px;
+    left:100px;
+    transition:transform 0.3s ease;
+    z-index: 10;
+    animation: moveBadge 1.3s ease-in-out infinite alternate;
+}
+
+#azurepic:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+}
+
+.azureskill{
+    background:transparent;
+    border:none;
+    font-size:60px;
+    font-weight: bold;
+    position:absolute;
+    top:3190px;
+    left:-560px;
+    color: #1b6294;
+    white-space:nowrap;
+    
+}
+
+#lineer4{
+    height: 100px;
+    width: 850px;
+    position:absolute;
+    top:3280px;
+    left:40px;
+}
+
+#azuretransfer{
+    background:transparent;
+    border:none;
+    position:fixed;
+    cursor:pointer;
+    height:60px;
+    width:60px;
+    top:530px;
+    right:10px;
+    transition:transform 0.3s ease;
+    z-index: 10;
+}
+
+#azuretransfer:hover{
+    transform: scale(0.95);
+    transform-origin: center;
+}
+
+
+
+
+
+
+
+
+
+

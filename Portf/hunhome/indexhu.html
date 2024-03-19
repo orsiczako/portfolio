@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_indexhu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Imprima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Imprima&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Portfólió</title>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <h1 class="welcome">Köszöntelek a <br>portfóliómban</h1>
+        </div>
+        <div>
+            <h2 class="introduction">Czakó Orsolya vagyok</h2>
+        </div>
+        <div>
+            <h2 class="myname">Czakó <br>Orsolya</h2>
+        </div>
+        <div>
+            <h3 class="introduction1">Programtervező informatikus hallgató</h3>
+        </div> 
+
+        <div class="download-button">
+            <a href="resume.pdf" download>
+                <button class="ubotton" id="resume-text">Önéletrajz <img src="/Portf/pics/download.png" id="downloadpng" alt="Download Icon" class="downloadpng"></button>
+            </a>
+        </div>
+        
+        <div class="upperbuttons">
+            <button class="ubotton" onclick="redirectToHungarian1()">Főoldal</button>
+            <button class="ubotton" onclick="redicertToHunSkills()">Képességeim</button>
+            <button class="ubotton" onclick="nextPage()">Kapcsolat</button>
+            <button class="ubotton" onclick="nextPage()">Projektjeim</button>
+        </div>
+
+        <div class="upperbuttonicons">
+            <img src="/Portf/pics/home.gif" id="homeIcon" alt="Home Icon" class="gifhome">
+            <img src="/Portf/pics/idea.gif" id="skillsIcon" alt="Skills Icon" class="gifhome">
+            <img src="/Portf/pics/contact.gif" id="contactIcon" alt="Contact Icon" class="gifhome">
+            <img src="/Portf/pics/document.gif" alt="Projects Icon" class="gifhome">
+        </div>
+
+        <div class="mepic">
+            <img src="/Portf/pics/me.png" alt="Me" class="mepic">
+        </div>
+
+        <div class="line"></div> 
+
+        <div class="flagbutton">
+            <button class="flagb hungary" onclick="redirectToHungarian1()">
+                <img src="/Portf/pics/hungaryhu.png" id="hungaryFlag" alt="Hungarian Flag">
+            </button>
+            <span class="flag-text" id="hu">HU</span>
+        </div>
+        
+        <div class="flagbutton1">
+            <button class="flagb english" onclick="redirectToEnglish1()">
+                <img src="/Portf/pics/englishflaghu.png" id="englishFlag" alt="English Flag">
+            </button>
+            <span class="flag-text" id="en">EN</span>
+        </div>
+        <div class="github">
+            <button class="gitb" onclick="redirectToGitHub()"><img src="/Portf/pics/github.png" id="git" alt="Github Button"></button>
+        </div>
+        <div class="linkedin">
+            <button class="linb" onclick="redirectToLinkedIn()"><img src="/Portf/pics/linkedin.png" id="lin" alt="Linkedin Button"></button>
+        </div>
+    </div>
+    <script>
+        function redirectToEnglish1() {
+            window.location.href = '/Portf/enhome/index.html';
+        }
+
+        function redirectToHungarian1() {
+            window.location.href = '/Portf/hunhome/indexhu.html'; 
+        }
+        function redirectToLinkedIn() {
+            window.location.href = 'https://www.linkedin.com/in/czak%C3%B3-orsolya-908128257'; 
+        }
+        function redirectToGitHub() {
+            window.location.href = 'https://github.com/orsiczako'; 
+        }
+        function redicertToHunSkills() {
+            window.location.href = '/Portf/hunskills/hunskills.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Imprima&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Imprima&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<!--sans: "Soehne", system-ui, -apple-system, Helvetica Neue, Arial, sans-serif; ez egy fasza betűtípus!!-->
+
+<body>
+    <div class="main">
+        <div>
+            <h1 class="welcome">Welcome to my <br>portfolio</h1>
+        </div>
+        
+        <div>
+            <h2 class="introduction">My name is Czakó Orsolya</h2>
+        </div>
+        <div>
+            <h2 class="myname">Czakó <br>Orsolya</h2>
+        </div>
+        <div>
+            <h3 class="introduction1">I'm a computer science major</h3>
+        </div> 
+        <div>
+            <h1 class="welcome1">Welcome to my <br>&nbsp&nbsp&nbsp&nbsp&nbspportfolio</h1>
+        </div>
+
+        <div class="download-button">
+            <a href="/Portf/resume.pdf" download>
+                <button class="ubotton" id="resume-text">Resume <img src="/Portf/pics/download.png" id="downloadpng" alt="Download Icon" class="downloadpng"></button>
+            </a>
+        </div>
+        
+        <div class="upperbuttons">
+            <button class="ubotton" onclick="redirectToEnglish()">Home</button>
+            <button class="ubotton" onclick="redirectToSkills()">My skills</button>
+            <button class="ubotton" onclick="nextPage()">Contact</button>
+            <button class="ubotton" onclick="nextPage()">Projects</button>
+        </div>
+
+        <div class="upperbuttonicons">
+            <img src="/Portf/pics/home.gif" id="homeIcon" alt="Home Icon" class="gifhome">
+            <img src="/Portf/pics/idea.gif" id="skillsIcon" alt="Skills Icon" class="gifhome">
+            <img src="/Portf/pics/contact.gif" id="contactIcon" alt="Contact Icon" class="gifhome">
+            <img src="/Portf/pics/document.gif" alt="Projects Icon" class="gifhome">
+        </div>
+
+        <div class="mepic">
+            <img src="/Portf/pics/me.png" alt="Me" class="mepic">
+        </div>
+
+        <div class="line"></div> 
+
+        <div class="flagbutton">
+            <button class="flagb hungary" onclick="redirectToHungarian()">
+                <img src="/Portf/pics/hungary.png" id="hungaryFlag" alt="Hungarian Flag">
+            </button>
+            <span class="flag-text" id="hu">HU</span>
+        </div>
+        
+        <div class="flagbutton1">
+            <button class="flagb english" onclick="redirectToEnglish()">
+                <img src="/Portf/pics/englishflag.png" id="englishFlag" alt="English Flag">
+            </button>
+            <span class="flag-text" id="en">EN</span>
+        </div>
+        
+        <div class="github">
+            <button class="gitb" onclick="redirectToGitHub()"><img src="/Portf/pics/github.png" id="git" alt="Github Button"></button>
+        </div>
+        <div class="menu">
+        <div class="linkedin">
+            <button class="linb" onclick="redirectToLinkedIn()"><img src="/Portf/pics/linkedin.png" id="lin" alt="Linkedin Button"></button>
+        </div>
+    </div>
+    <script>
+        function redirectToEnglish() {
+            window.location.href = '/Portf/enhome/index.html'; 
+        }
+
+        function redirectToHungarian() {
+            window.location.href = '/Portf/hunhome/indexhu.html'; 
+        }
+        function redirectToLinkedIn() {
+            window.location.href = 'https://www.linkedin.com/in/czak%C3%B3-orsolya-908128257'; 
+        }
+        function redirectToGitHub() {
+            window.location.href = 'https://github.com/orsiczako'; 
+
+        }
+        function redirectToSkills(){
+            window.location.href ='/Portf/enskills/enskills.html';
+        }
+    </script>
+</body>
+</html>

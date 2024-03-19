@@ -1,0 +1,360 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y:auto;
+    background-color: #e5d7ebd6;
+}
+
+.main {
+    position: relative; 
+    height:100vh;
+}
+
+
+
+.welcome {
+    font-family: 'Imprima',sans-serif;
+    line-height: 1em;
+    font-size: 80px;
+    font-weight: bold;
+    color: #2c1981;
+    
+    margin-top: 150px;
+    margin-bottom: 20px;
+    left:-640px;
+    animation: moveText 1.5s ease-in-out infinite alternate;
+    position:absolute;
+    
+    
+}
+@keyframes moveText {
+    0% {
+        transform: scale(1); /* Normal meret */
+    }
+    100% {
+        transform: scale(1.05); /* Kicsit nagyobb meret */
+    }
+}
+
+.upperbuttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px;
+    display: flex; 
+    align-items: center;
+    
+}
+
+.line {
+    width: 100vw;
+    height: 83px; 
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0; 
+}
+.imprima-regular {
+    font-family: "Imprima", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+.myname {
+    font-family: 'Imprima',sans-serif;
+    line-height: 1em;
+    font-size: 17px;
+    font-weight:bold;
+    color: #000000;
+    
+    position: fixed; 
+    top: -16px; 
+    left: 6px; 
+    z-index: 1000; 
+    margin-right: 1264px;
+    
+    margin-top: 19px;
+    background-color: #767ff4;
+    transition: transform 0.3s ease;
+    border: 6px solid;
+    border-color: #e5d7eb;
+    border-radius: 60px;
+    padding: 15px 35px;
+    
+    
+}
+.myname:hover {
+    transform: scale(0.95); /* Shrink the element slightly on hover */
+}
+
+
+
+
+.ubotton {
+    font-family: 'Imprima',sans-serif;
+    background-color: #767ff4;
+    color: #170073;
+    padding: 15px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 6px 3px;
+    cursor: pointer;
+    border: none;
+    border-radius: 17px;
+    margin-right: 15px; 
+    margin-left:63px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.ubotton:hover {
+    background-color: #e5d7ebd6;
+    color: #170073;
+}
+
+
+.gifhome {
+    width: 50px; 
+    height: 50px;
+    margin-right: 50px; 
+    vertical-align: middle; 
+    margin-left:110px;
+    background-color: transparent 
+    
+}
+
+.upperbuttonicons {
+    position: fixed;
+    top: 3px; 
+    right:115px; 
+   
+    z-index: 900;
+    
+    padding: 10px;
+    
+    
+}
+.gifhome#homeIcon {
+    margin-right: 40px; 
+}
+
+.gifhome#skillsIcon {
+    margin-right: 60px; 
+}
+
+
+.mepic {
+    width: 550px;
+    height: 550px;
+    background-color: transparent;
+    position:absolute;
+    left:35px;
+    top:100px;
+    
+}
+
+.introduction {
+    font-family: 'Dosis', sans-serif;
+    
+    font-size: 50px;
+    
+    color: #2c1981e4;
+    position:absolute;
+    top:310px;
+    left:-640px;
+   
+    
+}
+.introduction1{
+    font-family: 'Dosis', sans-serif;
+    line-height: 1em;
+    font-size: 40px;
+    
+    color:#2c1981e4;
+    position:absolute;
+    top:410px;
+    left:-640px;
+}
+
+
+
+#resume-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 540px;
+    left: -700px;
+    color: #000000;
+    background-color: rgba(120, 125, 174, 0.783);
+    transition: background-color 0.46s ease;
+    overflow: hidden;
+    z-index: 1; /* Ensure the button text is above the pseudo-element */
+    transition: transform 0.3s ease;
+}
+
+
+#resume-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background-color: #676dc0;
+    color:#000000;
+    transition: left 0.46s ease;
+    z-index: -1; 
+    font-weight:100;
+}
+
+#resume-text:hover::before {
+    left: 100%;
+    
+}
+#resume-text:hover{
+    transform: scale(1.2);
+}
+
+
+
+
+.download-button img {
+    position: relative; 
+    bottom: 3px; 
+    right: -15px; 
+    vertical-align: middle; 
+    width: 27px;
+    height: 27px;
+    
+}
+
+#hungaryFlag {
+    background: transparent; 
+    border: none;
+    width: 45px;
+    height: 40px;
+    position: fixed;
+    top:22px;
+    
+    left:170px;
+    transition: transform 0.3s ease;
+    z-index:1000;
+    
+}
+#hungaryFlag:hover {
+    transform: scale(1.2); /* Scale the button by 10% on hover */
+}
+#git{
+    background: transparent; 
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:770px;
+    position:absolute;
+    right:650px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+
+}
+#git:hover {
+    transform: scale(1.2);
+}
+#lin{
+    background: transparent; 
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top:770px;
+    position:absolute;
+    right:585px;
+    transition: transform 0.3s ease;
+    cursor:pointer;
+
+}
+#lin:hover{
+    transform: scale(1.2);
+}
+#englishFlag {
+    background: transparent; 
+    border: none;
+    width: 45px;
+    height: 40px;
+    position: fixed;
+    top:22px;
+    
+    left:270px;
+    transition: transform 0.3s ease;
+    z-index:1000;
+    
+    
+}
+#englishFlag:hover {
+    transform: scale(1.2); /* Scale the button by 10% on hover */
+}
+
+#en{
+    font-family:'Times New Roman';
+    background: transparent; 
+    border: none;
+    font-size:20px;
+    position: absolute;
+    top:30px;
+    
+    left:330px;
+    position:fixed;
+    
+    color: #170073;
+
+}
+#hu{
+    font-family:'Times New Roman';
+    background: transparent; 
+    border: none;
+    font-size:20px;
+    position: fixed;
+    top:30px;
+    
+    left:225px;
+    color: #170073;
+
+}
+.welcome1{
+    display:none;
+}
+
+
+/* For iPhone SE and smaller devices */
+/* For iPhone SE and smaller devices */
+
+
+/* For iPhone 6/7/8 and similar-sized devices */
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    /* Adjust styles for iPhone 6/7/8 and similar-sized devices */
+}
+
+/* For iPhone X/XS and similar-sized devices */
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+    /* Adjust styles for iPhone X/XS and similar-sized devices */
+}
+
+/* For iPhone 11 Pro Max and similar-sized devices */
+@media only screen and (min-width: 415px) and (max-width: 428px) {
+    /* Adjust styles for iPhone 11 Pro Max and similar-sized devices */
+}
+
+/* For larger Android phones and similar-sized devices */
+@media only screen and (min-width: 429px) and (max-width: 600px) {
+    /* Adjust styles for larger Android phones and similar-sized devices */
+}
+
+/* For tablets and larger devices */
+@media only screen and (min-width: 601px) {
+    /* Adjust styles for tablets and larger devices */
+}
