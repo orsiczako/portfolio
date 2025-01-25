@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+  background-color: black;
+  color: white;
+  font-family: "JetBrains Mono", serif;
+  font-optical-sizing: auto;
+  overflow-x: hidden;
+  margin: 0;
+}
+/*Ezt itt hagyd békén, ne nyúlj bele!*/
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  width: 100%;
+  padding: 0.1rem;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  flex: auto;
+  margin: auto;
+  justify-content: space-evenly;
+  background-image: linear-gradient(45deg, #417de1, #c0a9e2, #ffa4d8);
+  border-radius: 2em;
+  padding: 0.6em;
+  width: fit-content;
+  min-width: 30%;
+  flex-shrink: 1;
+  font-size: clamp(0.5rem, 1.5vw, 1.2rem);
+}
+
+#logo {
+  width: clamp(5%, 10vw, 10%);
+  height: auto;
+  margin-right: 1em;
+}
+
+ul > li > button {
+  /*
+    Ez a kódrészlet azért jött létre, hogy a betűméret a szélességhez mérten nőjön 
+    és csökkenjen.
+    A `clamp` függvény segítségével a betűméret minimum 0.8rem,
+     maximum 1.5rem lehet, és a szélesség 2%-ához igazodik.
+*/
+  font-size: clamp(0.8rem, 2vw, 10rem);
+  text-align: center;
+  margin-right: 1em;
+  background: transparent;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  border-color: transparent;
+  font-family: "JetBrains Mono", serif;
+  font-weight: regular 400;
+}
+button img {
+  width: 1.5em;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button#linkedin,
+button#github {
+  padding: 0;
+  margin: 0 0.5em;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button#linkedin img,
+button#github img {
+  width: 1.3em;
+  height: auto;
+}
+
+button.info:hover {
+  transform: translateY(-1.5px) scale(1.1);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+}
+:is(#linkedin, #github):hover {
+  transform: translateY(-1.5px) scale(1.1);
+}
+
+@keyframes color-change {
+  /*Ennek köszönhetően váltakozni fog a színe a szövegnek*/
+  0% {
+    color: #417de1;
+  }
+  20% {
+    color: #c0a9e2;
+  }
+  40% {
+    color: #ffa4d8;
+  }
+  60% {
+    color: #c466c4c3;
+  }
+  80% {
+    color: #ffffff;
+  }
+  90% {
+    color: #c0a9e2;
+  }
+  100% {
+    color: #417de1;
+  }
+  /*Azért van ilyen sok színváltás, 
+  mert különben hirtelen váltana vissza kékre, az meg csúnya*/
+}
+
+.header-container {
+  grid-template-areas:
+    "A B"
+    "C D";
+  grid-template-columns: 1fr 1.1fr;
+  grid-template-rows: auto auto;
+  display: grid;
+  margin: 0.5em;
+}
+.header {
+  grid-area: A;
+  position: relative;
+  flex-direction: column;
+  margin-left: 1.5em;
+  animation: color-change 20s infinite;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: normal;
+}
+
+.me {
+  row-gap: 1em;
+  grid-area: B;
+  width: 80%;
+  margin-top: 5.5em;
+
+  height: auto;
+  justify-self: end;
+  position: relative;
+  left: 10px;
+}
+.header h3 {
+  margin-left: 0.5em;
+}
+
+#quote,
+#writer {
+  grid-area: C;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-family: "Red Hat Display", serif;
+  font-weight: lighter;
+}
+#quote {
+  font-size: 1.4em;
+  margin-top: 2.5em;
+}
+#write {
+  grid-area: D;
+  right: 100px;
+}
+.header-container > :nth-child(3) {
+  grid-column: 1 / span 2; /* Make the C column span both columns */
+}
