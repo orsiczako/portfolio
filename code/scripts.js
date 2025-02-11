@@ -28,26 +28,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
 
   function handleScroll() {
-    // Megnézzük, hogy a felhasználó éppen hol tart az oldalon
     let scrollPosition = window.scrollY + window.innerHeight / 2;
+    let activeSection = sections[0]; // Alapértelmezett aktív szekció
 
     sections.forEach((section) => {
-      let sectionTop = section.offsetTop; // Szekció tetejének pozíciója
-      let sectionBottom = sectionTop + section.clientHeight; // Szekció alja
+      let sectionTop = section.offsetTop;
+      let sectionBottom = sectionTop + section.clientHeight;
 
-      // Ha a felhasználó ezen a szekción belül van, akkor aktív lesz
+      // Ha a képernyő középpontja ebben a szekcióban van, akkor ezt választjuk aktívnak
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        section.classList.add("active"); // Kiemeljük az aktuális szekciót
-      } else {
-        section.classList.remove("active"); // Ha már nem ott van, akkor levesszük a kiemelést
+        activeSection = section;
       }
     });
 
-    // Ha a kezdő (home) szekció már nincs a képernyőn, akkor halványítsuk el
+    // Minden szekcióból eltávolítjuk az "active" osztályt
+    sections.forEach((section) => section.classList.remove("active"));
+
+    // A kiválasztott szekciót aktívvá tesszük
+    activeSection.classList.add("active");
+
+    // Home fade-out kezelése
     if (scrollPosition > homeSection.clientHeight / 2) {
-      homeSection.classList.add("fade-out"); // Home eltűnik
+      homeSection.classList.add("fade-out");
     } else {
-      homeSection.classList.remove("fade-out"); // Ha visszagörgetsz, újra látható lesz
+      homeSection.classList.remove("fade-out");
     }
   }
 

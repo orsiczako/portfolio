@@ -1,0 +1,10 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This ensures the div takes the full viewport height */
+  text-wrap: wrap;
+}
+body {
+  background: linear-gradient(45deg, #417de1, #c0a9e2, #ffa4d8);
+}
