@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @import url(about_style.css);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 body {
   background-color: black;
   color: white;
@@ -16,7 +23,7 @@ body {
 }
 
 .section {
-  height: 100vh;
+  height: 100dvh;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
 }
@@ -44,7 +51,7 @@ body {
 }
 /* Az első szekció (home) kezdetben láthatatlan */
 
-/*@keyframes gradientAnimation {
+@keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
   }
@@ -54,7 +61,7 @@ body {
   100% {
     background-position: 0% 50%;
   }
-}*/
+}
 
 nav {
   top: 0;
@@ -172,60 +179,72 @@ button.info:hover {
   /*Azért van ilyen sok színváltás, 
   mert különben hirtelen váltana vissza kékre, az meg csúnya*/
 }
+.header-container > * {
+  /* Engedi, hogy a grid szabályozza a méretet */
+  /*border: 2px solid red;*/ /* Láthatóvá teszi a méreteket */
+}
 
 .header-container {
-  grid-template-areas:
-    "A B"
-    "C D";
-  grid-template-columns: 1fr 1.1fr;
-  grid-template-rows: auto auto;
   display: grid;
-  margin: 0.5em;
+  grid-template-areas:
+    "name picture"
+    "name picture"
+    "quote picture"
+    "writer writer"; /* C teljes szélességben */
 }
+
 .header {
-  grid-area: A;
-  position: relative;
+  grid-area: name;
   flex-direction: column;
-  margin-left: 1.7em;
-  animation: color-change 10s infinite;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  animation: color-change 9s infinite;
   font-weight: normal;
-  margin-top: 2em;
+  /*Legyen középen*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.quote-container {
+  font-family: "Red Hat Display", serif;
+  font-weight: lighter;
+  margin-left: 3em;
+  margin-top: 3em;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-self: flex-start;
 }
 
 .me {
-  row-gap: 1em;
-  grid-area: B;
-  width: 100%;
-  margin-top: 5.3em;
-
+  grid-area: picture;
   height: auto;
-  justify-self: end;
-  position: relative;
-  left: 10px;
-  right: 15px;
+  max-width: 90%;
+  padding-top: 6.5em;
+  flex-grow: 2;
+  margin-left: 2.5em;
 }
+
 .header h1 {
-  font-size: clamp(4.5rem, 2.5vw, 2rem);
+  font-size: clamp(2rem, 5.5vw, 6rem);
+  margin-left: 1em;
 }
 .header h3 {
   margin-left: 1em;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-size: clamp(2rem, 5vw, 2rem);
 }
 
-#quote,
-#writer {
-  grid-area: C;
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
-  font-family: "Red Hat Display", serif;
-  font-weight: lighter;
-}
 #quote {
-  font-size: 1.1em;
-  margin-top: 2.5em;
+  grid-area: quote;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 1.8em;
+  width: 125%;
 }
-#write {
-  right: 100px;
+#writer {
+  grid-area: writer;
+  margin-left: 2em;
 }
 /* Menü ikon (hamburger) */
 .menu-icon {
@@ -236,14 +255,13 @@ button.info:hover {
   margin-right: 1em;
 }
 #more {
-  margin-top: 3.5em;
-  margin-left: 2em;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   width: 5em;
   height: 5em;
   border-radius: 50%;
   background-color: #744ab2;
   font-weight: bold;
+  margin-left: 15em;
 }
 #more::before {
   content: "\21E3";
@@ -257,59 +275,79 @@ button.info:hover {
   transform: translateY(-1.5px) scale(1.1);
   color: #141113;
 }
-
-/* Rejtett menü kisebb képernyőn */
-@media screen and (width<767px) {
-  .me {
-    display: none;
-  }
-  #logo {
-    top: 10px;
-    margin: auto;
-    display: block;
-  }
-  .header-container {
-    top: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .header {
-    margin-top: 0;
-    margin-left: 1em;
-    font-size: 1.5em;
-  }
-  #quote,
-  #writer {
-    margin-top: 3em;
-    grid-area: D;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #417de1;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    padding: 1em 0;
-    border-radius: 0 0 1em 1em;
-  }
-
-  .nav-links.show {
-    display: flex; /* Megjelenítés kattintásra */
-  }
-
-  .menu-icon {
-    display: block; /* Menü ikon megjelenítése */
-  }
-}
-
 #about div h1 {
   font-size: clamp(4em, 2.5vw, 2rem);
 }
 #about div h1 > span {
   font-size: clamp(2rem, 2.5vw, 1rem);
+}
+
+/* Rejtett menü kisebb képernyőn */
+@media screen and (max-width: 767px) {
+  section {
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .me {
+    display: none;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .quote-container {
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem);
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+  #quote {
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+  #writer {
+    text-align: center;
+    width: 100%;
+  }
+  #more {
+    font-size: 2em; /* Teljes szélesség */
+    display: block; /* Blokk elemként jelenik meg */
+    text-align: center;
+    margin: 1em 0 0; /* Felül kis távolság */
+    font-size: 3vw;
+    max-width: 400px; /* Maximális szélesség */
+    box-sizing: border-box;
+  }
 }

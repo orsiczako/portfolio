@@ -1,10 +1,3 @@
-function toggleMenu() {
-  const navLinks = document.querySelector(".nav-links");
-  navLinks.classList.toggle("show");
-}
-
-document.querySelector(".menu-icon").addEventListener("click", toggleMenu);
-
 /*Hogy ha rányomunk egy olyan elemre, ami rendelkezik a data-rul-el
     akkor elvisz minket az adott oldalra, ez igazából ennyi */
 function onClickLink(event) {
@@ -48,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
     activeSection.classList.add("active");
 
     // Home fade-out kezelése
-    if (scrollPosition > homeSection.clientHeight / 2) {
+    // Home fade-out kezelése csak akkor, ha már görgettél
+    if (window.scrollY > 10 && scrollPosition > homeSection.clientHeight / 2) {
       homeSection.classList.add("fade-out");
     } else {
       homeSection.classList.remove("fade-out");
