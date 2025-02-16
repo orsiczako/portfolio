@@ -70,12 +70,10 @@ nav {
   top: 0;
   display: flex;
   width: 100%;
-
   align-items: center;
   z-index: 1000;
-
-  height: 3em; /* Beállított magasság */
-  padding: 0.5em;
+  height: 3em;
+  padding: 0.4em;
   overflow: hidden;
 }
 
@@ -84,45 +82,29 @@ nav ul {
   list-style-type: none;
   flex: auto;
   align-items: center;
-  gap: 1rem;
-  padding: 0.5em;
   justify-content: space-evenly;
   background-image: linear-gradient(45deg, #417de1, #c0a9e2, #ffa4d8);
   border-radius: 2em;
-  padding: 0.7em;
-  width: clamp(180px, 65%, 900px);
+  padding: 0.6em;
   font-size: clamp(0.7rem, 1.8vw, 1.1rem);
-  /*A clamp() függvény három paramétert vesz fel:
-  - Az első paraméter (0.7rem) a minimális érték, amit a font-size felvehet.
-  - A második paraméter (1.8vw) a preferált érték, amit a font-size felvehet a viewport szélessége alapján.
-  - A harmadik paraméter (1.1rem) a maximális érték, amit a font-size felvehet.
-*/
+  width: 100%;
   margin: 0 0.5em;
-}
-#logo {
-  width: clamp(5%, 10vw, 10%);
-  height: auto;
-
-  margin-top: 0.3em;
-  margin-left: -1em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
 }
 
 ul li button {
-  /*
-    Ez a kódrészlet azért jött létre, hogy a betűméret a szélességhez mérten nőjön 
-    és csökkenjen.
-    A clamp függvény segítségével a betűméret minimum 0.8rem,
-     maximum 1.5rem lehet, és a szélesség 2%-ához igazodik.
-*/
   font-size: clamp(0.6rem, 1.6vw, 1.2rem);
   text-align: center;
-  margin-right: 1em;
   background: transparent;
   transition: transform 0.3s ease;
   border-radius: 10px;
   border-color: transparent;
   font-family: "JetBrains Mono", serif;
-  font-weight: regular 400;
+  font-weight: 500;
+  width: auto;
+  flex-shrink: 1;
 }
 button img {
   width: 1.5em;
@@ -133,33 +115,31 @@ button img {
 
 button#linkedin,
 button#github {
-  min-width: 40px;
-  min-height: 40px;
   padding: 0;
-  margin: 0 0.5em;
   width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 2;
 }
 
 button#linkedin img,
 button#github img {
-  width: clamp(18px, 1.9vw, 28px);
+  width: clamp(0.5em, 2vw, 2em);
   height: auto;
-  transition: width 0.3s ease;
+  transition: width 0.1s ease;
 }
 
 button.info:hover {
-  transform: translateY(-1.5px) scale(1.1);
+  transform: translateY(-1.5px) scale(1.16);
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 30px;
   font-weight: bold;
-  color: #4f0d4f;
+  color: #af2a90;
 }
 :is(#linkedin, #github):hover {
-  transform: translateY(-1.5px) scale(1.2);
+  transform: translateY(-1.5px) scale(1.25);
 }
 
 @keyframes color-change {
@@ -440,10 +420,6 @@ button.info:hover {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
   .me {
-    display: none;
-  }
-
-  #logo {
     display: none;
   }
 
