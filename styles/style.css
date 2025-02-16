@@ -283,12 +283,60 @@ button.info:hover {
 }
 
 @media screen and (max-width: 767px) {
+  html,
   body {
     overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  section {
+
+  .header-container {
+    display: grid;
+    grid-template-areas:
+      "name"
+      "quote"
+      "writer";
+    justify-items: center;
+    text-align: center;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+
+  .header {
+    grid-area: name;
+    text-align: center;
     width: 100%;
-    height: 100vh;
+    max-width: 90vw;
+  }
+  .header h1 {
+    font-size: clamp(2.2rem, 5.5vw, 6rem);
+  }
+  .header h3 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-top: 2em;
+  }
+
+  #quote {
+    grid-area: quote;
+    text-align: center;
+    width: 100%;
+    max-width: 90vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  #writer {
+    grid-area: writer;
+    text-align: center;
+    width: 100%;
+    max-width: 90vw;
+    margin-left: 0;
   }
 
   .nav-links {
@@ -302,47 +350,55 @@ button.info:hover {
   #logo {
     display: none;
   }
-
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-clip-margin: 1rem;
-    display: flow-root;
+  #more {
+    display: none;
   }
 
-  .header {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1em;
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0em 1em;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .quote-container {
     font-size: clamp(0.8rem, 2.5vw, 1.5rem);
     word-wrap: break-word;
-    hyphens: auto;
-    max-width: 100%;
     overflow-wrap: break-word;
+    max-width: 90vw;
     text-align: center;
+    margin: 5em auto;
+  }
+  #scroll-down {
+    display: block;
+    position: fixed;
+    bottom: 2em;
+    left: 15%;
+    transform: translateX(-50%);
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: #744ab2;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    z-index: 1000;
   }
 
-  #quote {
-    width: auto;
-    max-width: 100%;
-    text-align: center;
-
-    box-sizing: border-box;
+  #scroll-down::before {
+    content: "\21E3";
+    font-size: 1.6em;
+    color: white;
   }
 
-  #writer {
-    text-align: center;
-    width: 100%;
+  #scroll-down:hover::before {
+    color: #141113;
   }
-  #more {
-    display: none;
+
+  #scroll-down:hover {
+    transform: translateX(-50%) translateY(-3px) scale(1.1);
   }
 }

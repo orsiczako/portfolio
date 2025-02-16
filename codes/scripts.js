@@ -54,3 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Az oldal betöltése után azonnal ellenőrizzük a helyzetet
   handleScroll();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollDownButton = document.getElementById("scroll-down");
+  const sections = document.querySelectorAll(".section");
+  let currentIndex = 0;
+
+  scrollDownButton.addEventListener("click", function () {
+    currentIndex++;
+    if (currentIndex >= sections.length) {
+      currentIndex = 0;
+    }
+
+    sections[currentIndex].scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+});
