@@ -7,6 +7,9 @@ body {
   padding: 0;
   width: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: black;
@@ -91,13 +94,14 @@ nav ul {
   - A második paraméter (1.8vw) a preferált érték, amit a font-size felvehet a viewport szélessége alapján.
   - A harmadik paraméter (1.1rem) a maximális érték, amit a font-size felvehet.
 */
-  margin: 0 1.3em;
+  margin: 0 0.5em;
 }
 #logo {
   width: clamp(5%, 10vw, 10%);
   height: auto;
 
-  margin-top: 0.5em;
+  margin-top: 0.3em;
+  margin-left: -1em;
 }
 
 ul li button {
@@ -136,7 +140,7 @@ button#github {
 
 button#linkedin img,
 button#github img {
-  width: clamp(18px, 1.8vw, 28px);
+  width: clamp(18px, 1.9vw, 28px);
   height: auto;
   transition: width 0.3s ease;
 }
@@ -150,7 +154,7 @@ button.info:hover {
   color: #4f0d4f;
 }
 :is(#linkedin, #github):hover {
-  transform: translateY(-1.5px) scale(1.1);
+  transform: translateY(-1.5px) scale(1.2);
 }
 
 @keyframes color-change {
@@ -245,6 +249,50 @@ button.info:hover {
 #writer {
   grid-area: writer;
   margin-left: 2em;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
+#scroll-down,
+#scroll-up {
+  display: block;
+  position: fixed;
+  bottom: 2em;
+  right: 1%;
+  transform: translateX(-50%);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  z-index: 1000;
+}
+#scroll-up {
+  left: 4% !important;
+  background-color: #744ab2;
+}
+#scroll-down {
+  background-color: #ca5194;
+}
+
+#scroll-up::before {
+  content: "\21E1";
+  font-size: 1.6em;
+  color: white;
+}
+#scroll-down::before {
+  content: "\21E3";
+  font-size: 1.6em;
+  color: white;
+}
+
+#scroll-down:hover::before,
+#scroll-up:hover::before {
+  color: #141113;
+}
+
+#scroll-down:hover,
+#scroll-up:hover {
+  transform: translateX(-50%) translateY(-3px) scale(1.1);
 }
 /* Menü ikon (hamburger) */
 .menu-icon {
@@ -254,32 +302,38 @@ button.info:hover {
   color: white;
   margin-right: 1em;
 }
-#more {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  width: 5em;
-  height: 5em;
-  border-radius: 50%;
-  background-color: #744ab2;
-  font-weight: bold;
-  margin-left: 15em;
-}
-#more::before {
-  content: "\21E3";
-  font-size: 2em;
-  color: white;
-}
-#more:hover::before {
-  color: #141113; /* Change arrow color on hover */
-}
-#more:hover {
-  transform: translateY(-1.5px) scale(1.1);
-  color: #141113;
-}
+
 #about div h1 {
   font-size: clamp(4em, 2.5vw, 2rem);
 }
 #about div h1 > span {
   font-size: clamp(2rem, 2.5vw, 1rem);
+}
+.ham-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+.ham-menu span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+.off-screen-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Kezdő pozíció (rejtve) */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-top: 60px;
+  transition: 0.3s;
+}
+.off-screen-menu.active {
+  left: 0; /* Beúszik a képernyőre */
 }
 
 @media screen and (max-width: 767px) {
@@ -316,10 +370,11 @@ button.info:hover {
   }
   .header h1 {
     font-size: clamp(2.2rem, 5.5vw, 6rem);
+    margin: 0 1em;
   }
   .header h3 {
     font-size: clamp(1.5rem, 5vw, 2rem);
-    margin-top: 2em;
+    margin-top: 3em;
   }
 
   #quote {
@@ -338,19 +393,52 @@ button.info:hover {
     max-width: 90vw;
     margin-left: 0;
   }
-
-  .nav-links {
+  nav ul {
     display: none;
   }
+  .ham-menu {
+    display: block;
+  }
 
+  .ham-menu {
+    width: 2em;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .ham-menu span {
+    width: 100%;
+    height: 5px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 1em;
+    background-color: rgb(217, 141, 217);
+  }
+  .ham-menu span:nth-child(1) {
+    top: 25%;
+  }
+  .ham-menu span:nth-child(2) {
+    top: 75%;
+  }
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
   .me {
     display: none;
   }
 
   #logo {
-    display: none;
-  }
-  #more {
     display: none;
   }
 
@@ -374,31 +462,28 @@ button.info:hover {
     margin: 5em auto;
   }
   #scroll-down {
-    display: block;
-    position: fixed;
-    bottom: 2em;
-    left: 15%;
-    transform: translateX(-50%);
+    right: 1%;
     width: 4em;
     height: 4em;
-    border-radius: 50%;
-    background-color: #744ab2;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    z-index: 1000;
+  }
+  #scroll-up {
+    left: 10%;
+    width: 4em;
+    height: 4em;
+    margin-left: 3em;
   }
 
-  #scroll-down::before {
-    content: "\21E3";
-    font-size: 1.6em;
-    color: white;
+  .off-screen-menu {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Alapból rejtve */
+    width: 100%;
+    height: 100%;
+    background: rgba(107, 72, 118, 0.9);
+    transition: left 0.3s ease-in-out;
+    padding-top: 50px;
   }
-
-  #scroll-down:hover::before {
-    color: #141113;
-  }
-
-  #scroll-down:hover {
-    transform: translateX(-50%) translateY(-3px) scale(1.1);
+  .off-screen-menu.active {
+    left: 0%;
   }
 }

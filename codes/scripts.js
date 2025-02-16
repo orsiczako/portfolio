@@ -21,26 +21,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".section");
 
   function handleScroll() {
-    let scrollPosition = window.scrollY + window.innerHeight / 2;
-    let activeSection = sections[0]; // Alapértelmezett aktív szekció
+    let scrollPosition = window.scrollY;
+    let closestSection = sections[0];
+    let minDistance = Math.abs(scrollPosition - sections[0].offsetTop);
 
     sections.forEach((section) => {
-      let sectionTop = section.offsetTop;
-      let sectionBottom = sectionTop + section.clientHeight;
-
-      // Ha a képernyő középpontja ebben a szekcióban van, akkor ezt választjuk aktívnak
-      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        activeSection = section;
+      let distance = Math.abs(scrollPosition - section.offsetTop);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestSection = section;
       }
     });
 
     // Minden szekcióból eltávolítjuk az "active" osztályt
     sections.forEach((section) => section.classList.remove("active"));
 
-    // A kiválasztott szekciót aktívvá tesszük
-    activeSection.classList.add("active");
+    // A legközelebbi szekciót aktívvá tesszük
+    closestSection.classList.add("active");
 
-    // Home fade-out kezelése
     // Home fade-out kezelése csak akkor, ha már görgettél
     if (window.scrollY > 10 && scrollPosition > homeSection.clientHeight / 2) {
       homeSection.classList.add("fade-out");
@@ -56,19 +54,75 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  const sections = Array.from(document.querySelectorAll(".section"));
   const scrollDownButton = document.getElementById("scroll-down");
-  const sections = document.querySelectorAll(".section");
-  let currentIndex = 0;
+  const scrollUpButton = document.getElementById("scroll-up");
+
+  function getCurrentSectionIndex() {
+    let scrollY = window.scrollY;
+    let windowHeight = window.innerHeight;
+    let middleOfViewport = scrollY + windowHeight / 2;
+    return sections.findIndex(
+      (section) =>
+        section.offsetTop <= middleOfViewport &&
+        section.offsetTop + section.offsetHeight > middleOfViewport
+    );
+  }
+
+  function scrollToSection(index) {
+    if (index >= 0 && index < sections.length) {
+      sections[index].scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
 
   scrollDownButton.addEventListener("click", function () {
-    currentIndex++;
-    if (currentIndex >= sections.length) {
-      currentIndex = 0;
+    let currentIndex = getCurrentSectionIndex();
+    if (currentIndex < sections.length - 1) {
+      scrollToSection(currentIndex + 1);
     }
+  });
 
-    sections[currentIndex].scrollIntoView({
-      behavior: "smooth",
-      block: "start",
+  scrollUpButton.addEventListener("click", function () {
+    let currentIndex = getCurrentSectionIndex();
+    if (currentIndex > 0) {
+      scrollToSection(currentIndex - 1);
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuLinks = document.querySelectorAll('nav a[href^="#"]');
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const hamMenu = document.querySelector(".ham-menu");
+  const offScreenMenu = document.querySelector(".off-screen-menu");
+
+  hamMenu.addEventListener("click", function () {
+    hamMenu.classList.toggle("active");
+    offScreenMenu.classList.toggle("active");
+  });
+
+  // Bezárás, ha kattintasz egy menüpontot
+  document.querySelectorAll(".off-screen-menu a").forEach((link) => {
+    link.addEventListener("click", function () {
+      hamMenu.classList.remove("active");
+      offScreenMenu.classList.remove("active");
     });
   });
 });
