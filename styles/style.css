@@ -282,11 +282,12 @@ button.info:hover {
   font-size: clamp(2rem, 2.5vw, 1rem);
 }
 
-/* Rejtett menü kisebb képernyőn */
 @media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
   section {
     width: 100%;
-    overflow-x: hidden;
     height: 100vh;
   }
 
@@ -304,12 +305,14 @@ button.info:hover {
 
   .header-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-clip-margin: 1rem;
+    display: flow-root;
   }
 
   .header {
@@ -325,8 +328,6 @@ button.info:hover {
     max-width: 100%;
     overflow-wrap: break-word;
     text-align: center;
-
-    box-sizing: border-box;
   }
 
   #quote {
@@ -342,12 +343,6 @@ button.info:hover {
     width: 100%;
   }
   #more {
-    font-size: 2em; /* Teljes szélesség */
-    display: block; /* Blokk elemként jelenik meg */
-    text-align: center;
-    margin: 1em 0 0; /* Felül kis távolság */
-    font-size: 3vw;
-    max-width: 400px; /* Maximális szélesség */
-    box-sizing: border-box;
+    display: none;
   }
 }
