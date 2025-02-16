@@ -83,6 +83,9 @@ nav ul {
   display: flex;
   list-style-type: none;
   flex: auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5em;
   justify-content: space-evenly;
   background-image: linear-gradient(45deg, #417de1, #c0a9e2, #ffa4d8);
   border-radius: 2em;
@@ -130,6 +133,8 @@ button img {
 
 button#linkedin,
 button#github {
+  min-width: 40px;
+  min-height: 40px;
   padding: 0;
   margin: 0 0.5em;
   width: auto;
@@ -485,5 +490,18 @@ button.info:hover {
   }
   .off-screen-menu.active {
     left: 0%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ham-menu {
+    display: none !important;
+  }
+
+  nav ul {
+    display: flex !important;
+  }
+  #scroll-down,
+  #scroll-up {
+    display: flex !important;
   }
 }
