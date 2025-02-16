@@ -502,6 +502,6 @@ button.info:hover {
   }
   #scroll-down,
   #scroll-up {
-    display: flex !important;
+    display: visible;
   }
 }
