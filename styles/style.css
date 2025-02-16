@@ -400,7 +400,7 @@ button#github img {
   }
   .header h3 {
     font-size: clamp(1.3rem, 4.5vw, 1.8rem);
-    margin-top: 3em;
+    margin-top: 2.5em;
   }
 
   #quote {
@@ -485,13 +485,13 @@ button#github img {
   }
   #scroll-down {
     right: 1%;
-    width: 4em;
-    height: 4em;
+    width: 3.5em;
+    height: 3.5em;
   }
   #scroll-up {
     left: 10%;
-    width: 4em;
-    height: 4em;
+    width: 3.5em;
+    height: 3.5em;
     margin-left: 3em;
   }
 
