@@ -19,7 +19,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   overflow-y: auto;
-  background: linear-gradient(270deg, #191919, #000000);
+  background: linear-gradient(270deg, #161616, #141414);
   background-size: 600% 600%;
   animation: gradientAnimation 10s ease infinite;
   scroll-behavior: smooth;
@@ -109,7 +109,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1em;
+  margin: 0 0.5em;
 
   /* Zsugorodás */
   flex-shrink: 1;
@@ -501,12 +501,20 @@ button#github img {
     left: -100%; /* Alapból rejtve */
     width: 100%;
     height: 100%;
-    background: rgba(107, 72, 118, 0.9);
+    background: rgb(91, 40, 83);
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
+    list-style: none;
   }
   .off-screen-menu.active {
     left: 0%;
+  }
+  .off-screen-menu ul {
+    list-style: none;
+  }
+  .off-screen-menu ul li {
+    padding: 1em;
+    font-size: 1.5em;
   }
 }
 @media screen and (min-width: 768px) {
