@@ -310,12 +310,12 @@ button#github img {
 
 #scroll-up::before {
   content: "\21E1";
-  font-size: 1.6em;
+  font-size: 1.5em;
   color: white;
 }
 #scroll-down::before {
   content: "\21E3";
-  font-size: 1.6em;
+  font-size: 1.5em;
   color: white;
 }
 
