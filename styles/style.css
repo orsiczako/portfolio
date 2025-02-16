@@ -234,7 +234,7 @@ button#github img {
 .header {
   grid-area: name;
   flex-direction: column;
-  animation: color-change 9s infinite;
+  animation: color-change 8s infinite;
   font-weight: normal;
   /*Legyen középen*/
   display: flex;
@@ -505,6 +505,7 @@ button#github img {
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
     list-style: none;
+    height: 100vh;
   }
   .off-screen-menu.active {
     left: 0%;
