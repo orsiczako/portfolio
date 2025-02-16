@@ -505,13 +505,13 @@ button#github img {
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
     list-style: none;
-    height: 100vh;
   }
   .off-screen-menu.active {
     left: 0%;
   }
   .off-screen-menu ul {
     list-style: none;
+    height: 100vh;
   }
   .off-screen-menu ul li {
     padding: 1em;
