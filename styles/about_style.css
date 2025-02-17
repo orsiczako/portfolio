@@ -155,6 +155,7 @@
   background-color: #979797;
   border-radius: 50%;
   top: 3.3em;
+
   position: absolute;
   left: 0.9em; /* Move the dot outside the timeline */
 }
