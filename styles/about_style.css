@@ -1,14 +1,177 @@
-#section2.section {
-  margin-top: 2em;
-}
-#about {
-  display: flexbox;
-  margin-left: 1em;
-  margin-top: 10em;
+* {
+  text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
-  #section2 {
-    margin-top: 2em;
+#section2 {
+  display: flex;
+  flex-direction: column; /* Ensure a column layout */
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #d1b0d0,
+    /* Soft lavender pink */ #c1a1b1,
+    /* Muted rose taupe */ #9e8192,
+    /* Light mauve pink */ #8a6875,
+    /* Warm taupe rose */ #7d5a6c,
+    /* Deep dusty rose */ #6e4c59,
+    /* Rich dark rose */ #5a3e4f /* Dark mauve */
+  );
+
+  background-size: 400% 400%;
+  animation: waveBackground 15s ease-in-out infinite;
+}
+
+@keyframes waveBackground {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#line {
+  display: flex;
+  margin: 1em auto;
+  width: 20%;
+  padding: 0.3em;
+  height: 13px;
+  background-color: rgb(20, 19, 20);
+  text-align: center;
+  border-radius: 7em;
+}
+
+.title {
+  top: 0;
+}
+.title * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#exp-title {
+  font-size: 2.5em;
+  font-weight: 450;
+  color: #000000;
+  top: 0.3em;
+  align-self: center;
+}
+#cv {
+  padding: 0.7em;
+  border-radius: 1em;
+  width: 13%;
+  font-size: 1em;
+  font-family: "JetBrains Mono", serif;
+  background-color: #000000;
+  font-weight: 500;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  margin: 0.5em;
+}
+
+#cv span {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+
+  transition: transform 0.4s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+#cv:hover span {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+#cv:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease-in-out;
+  background-color: #ffffff;
+}
+
+#cv::after {
+  content: "\2B73";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  color: rgb(158, 58, 119);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#cv:hover::after {
+  opacity: 1;
+}
+.timelines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.timeline {
+  position: relative;
+  margin: 0.5em 0;
+  width: 90%; /* Take up most of the width on smaller screens */
+  background-color: rgb(118, 82, 118);
+  padding: 0.5em 0.3em;
+  border-radius: 8px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5.7em;
+  margin-left: 1em;
+  width: 3px;
+  height: 53%;
+  background-color: #979797;
+  bottom: 15em;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 2em;
+}
+
+.timeline-dot {
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  background-color: #979797;
+  border-radius: 50%;
+  top: 3.3em;
+  position: absolute;
+  left: 0.9em; /* Move the dot outside the timeline */
+}
+
+.timeline-content h3 {
+  background: transparent;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1.5em;
+  color: #161016;
+}
+
+.date {
+  font-size: 1.5em;
+  color: #718096;
+}
+
+#cv:hover {
+  transform: scale(1.1);
 }

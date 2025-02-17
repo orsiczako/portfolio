@@ -25,7 +25,7 @@
           <a href="#home"><button class="info">Kezdőlap</button></a>
         </li>
         <li>
-          <a href="#about"><button class="info">Rólam</button></a>
+          <a href="#about"><button class="info">Tapasztalat</button></a>
         </li>
         <li>
           <a href="#contact"><button class="info">Kapcsolat</button></a>
@@ -48,12 +48,13 @@
               <a href="#home"><button class="info">Kezdőlap</button></a>
             </li>
             <li class="nav-item">
-              <a href="#about"><button class="info">Rólam</button></a>
+              <a href="#about"><button class="info">Tapasztalat</button></a>
             </li>
+            
+            <li class="nav-item"><a href="#qualifications"><button class="info">Képesítések</button></a></li>
             <li class="nav-item">
               <a href="#contact"><button class="info">Kapcsolat</button></a>
             </li>
-            <li class="nav-item"><a href="#qualifications"><button class="info">Képesítések</button></a></li>
             <li class="nav-item">
               <a href="./codes/maintenance.html"><button class="info">Projektek</button></a>
             </li>
@@ -109,46 +110,53 @@
       </div>
     </section>
     <section id="section2" class="section">
-      <div id="about">
+      <span id="line"></span>
+      <div id="experience">
         <div data-en class="title" style="display: none">
-          <h1>About me</h1>
+          <h2 id="exp-title">Experience</h2>
         </div>
         <div data-hu class="title">
-          <h1>
-            Üdvözlöm! <br />
-            <span>Czakó Orsolya vagyok</span>
-          </h1>
+          <h2 id="exp-title">Tapasztalat</h2>
+          <a href="./images/CV.pdf" download>
+            <button id="cv">
+              <span>Önéletrajz</span> 
+            </button>
+          </a>
+          
         </div>
-        <div class="introduction">
-          <p data-en class="introtext" style="display: none"></p>
-          <p data-hu class="introtext">
-            Czakó Orsolya vagyok, másodéves programtervező informatikus hallgató
-            a Debreceni Egyetemen.A kreatív problémamegoldás és az innováció
-            iránti elkötelezettségem motivál abban, hogy olyan megoldásokat
-            hozzak létre, amelyek valódi értéket teremtenek. Szabadidőmben
-            szívesen mélyülök el technológiai kihívásokban, de a csapatmunka és
-            az együttműködés is nagy szerepet játszik az életemben, hiszen
-            hiszem, hogy a legjobb ötletek közös munkával születnek.
-          </p>
+        <div class="timelines">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+              <div class="timeline-content">
+                <h3>Course Instructor</h3>
+                <p class="date">2024. szept. - 2025. jún.</p>
+                <p>• Primarily lead Python courses, covering topics from basic programming to advanced object-oriented concepts. The curriculum progresses to object-oriented programming and eventually includes game development with Python and Pygame.
+                  <br>
+                  <br>
+                 • Conduct demonstration sessions to highlight key concepts and techniques, giving participants a clear understanding of how the course is structured.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    <section id="section3" class="section">
-      <div id="contact">
-        <div data-en class="title" style="display: none">
-          <h1>Contact</h1>
-        </div>
-        <div data-hu class="title">
-          <h1>Kapcsolat</h1>
-        </div>
-        <div class="contact">
-          <div class="contact-info">
-            <div class="contact-item"></div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+              <div class="timeline-content">
+                <h3>Software Engineer at your company</h3>
+                <p class="date">2025. - </p>
+                <p>Please hire me!</p>
+                  
+            </div>
           </div>
         </div>
       </div>
+      </div>
     </section>
-    <section id="section4" class="section">
+    
+    
+    <section id="section3" class="section">
       <div id="qualifications">
         <div data-en class="title" style="display: none">
           <h1>Qualifications</h1>
@@ -182,6 +190,21 @@
                 2019-2023
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section4" class="section">
+      <div id="qualifications"></div>
+        <div data-en class="title" style="display: none">
+          <h1>Contact</h1>
+        </div>
+        <div data-hu class="title">
+          <h1>Kapcsolat</h1>
+        </div>
+        <div class="contact">
+          <div class="contact-info">
+            <div class="contact-item"></div>
           </div>
         </div>
       </div>
