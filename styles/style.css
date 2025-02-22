@@ -596,4 +596,7 @@ button#github img {
   .social > ul > li {
     font-size: 0.01em;
   }
+  nav ul li {
+    margin-left: 0.01em;
+  }
 }
