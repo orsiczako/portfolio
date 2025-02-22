@@ -100,6 +100,7 @@ nav {
 }
 
 .information * {
+  color: black;
   margin: 0 0.6em;
   display: flex;
 }
@@ -572,14 +573,14 @@ button#github img {
     margin-top: 5em;
   }
   .header h1 {
-    font-size: clamp(5rem, 6vw, 8rem);
+    font-size: clamp(4.5rem, 6vw, 8rem);
   }
   .header h3 {
     font-size: clamp(2.3rem, 4vw, 3rem);
   }
   .social {
     position: absolute;
-    bottom: 0;
+    bottom: 1em;
     width: 100%;
     justify-content: center;
   }
@@ -588,5 +589,8 @@ button#github img {
 @media screen and (min-width: 600px) and (max-width: 1366px) and (orientation: landscape) {
   .me {
     display: block;
+  }
+  .information > .nav-links > .nav-item {
+    font-size: 0.1em;
   }
 }
