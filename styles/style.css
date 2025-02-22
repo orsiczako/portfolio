@@ -591,6 +591,9 @@ button#github img {
     display: block;
   }
   .information > .nav-links > .nav-item {
-    font-size: 0.1em;
+    font-size: 0.01em;
+  }
+  .social > ul > li {
+    font-size: 0.01em;
   }
 }
