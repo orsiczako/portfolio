@@ -4,19 +4,19 @@
 
 #section2 {
   display: flex;
-  flex-direction: column; /* Ensure a column layout */
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Nem fix magasság, hanem minimum 100vh */
+  height: auto; /* Növekedhet a tartalommal együtt */
   background: radial-gradient(
     circle,
     #d1b0d0,
-    /* Soft lavender pink */ #c1a1b1,
-    /* Muted rose taupe */ #9e8192,
-    /* Light mauve pink */ #8a6875,
-    /* Warm taupe rose */ #7d5a6c,
-    /* Deep dusty rose */ #6e4c59
+    #c1a1b1,
+    #9e8192,
+    #8a6875,
+    #7d5a6c,
+    #6e4c59
   );
-
   background-size: 400% 400%;
   animation: waveBackground 15s ease-in-out infinite;
 }
@@ -33,14 +33,21 @@
   }
 }
 #line {
-  display: flex;
   margin: 1em auto;
   width: 20%;
-  padding: 0.3em;
+  padding: 0.2em;
   height: 13px;
   background-color: rgb(20, 19, 20);
   text-align: center;
   border-radius: 7em;
+}
+.timeline-line {
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  background-color: #373737;
+  top: 10%;
+  left: 1%;
 }
 
 .title {
@@ -71,6 +78,7 @@
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   margin: 0.5em;
+  width: auto;
 }
 
 #cv span {
@@ -109,12 +117,14 @@
 #cv:hover::after {
   opacity: 1;
 }
+#experience,
 .timelines {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  overflow: auto;
 }
 
 .timeline {
@@ -124,6 +134,7 @@
   padding: 0.5em 0.3em;
   border-radius: 8px;
   border: #000000 2px solid;
+  overflow: hidden;
 }
 #first-timeline {
   background-color: #8f788d;
@@ -131,42 +142,16 @@
 #second-timeline {
   background-color: #bd99a2;
 }
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5.7em;
-  margin-left: 1em;
-  width: 3px;
-  height: 53%;
-  background-color: #373737;
-  bottom: 15em;
-}
 
 .timeline-item {
   display: flex;
+  position: relative;
   align-items: center;
   padding-left: 2em;
 }
 
-.timeline-dot {
-  width: 0.5em;
-  height: 0.5em;
-  position: absolute;
-  background-color: #373737;
-  border-radius: 50%;
-  top: 3.3em;
-
-  position: absolute;
-  left: 0.9em; /* Move the dot outside the timeline */
-}
-
-.timeline-content h3 {
-  background: transparent;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 1.5em;
-  color: #161016;
+.timeline-content:first-child {
+  margin-top: 1%;
 }
 
 .date {
@@ -178,9 +163,20 @@
   transform: scale(1.1);
 }
 @media screen and (max-width: 768px) {
+  .timeline {
+    padding: 0.1em;
+    width: 95%;
+    font-size: 0.9em;
+  }
   .timeline::before {
-    left: 1em;
+    left: 0.1em;
     transform: none;
+  }
+  .timeline-content h3 {
+    font-size: 1.2em; /* Kisebb cím */
+  }
+  .date {
+    font-size: 1em; /* Kisebb dátum */
   }
 
   .timeline-item {
@@ -190,7 +186,7 @@
   }
 
   .timeline-dot {
-    left: 0;
+    left: 0.9em;
     transform: translateX(0);
   }
 
