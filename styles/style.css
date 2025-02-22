@@ -577,6 +577,12 @@ button#github img {
   .header h3 {
     font-size: clamp(2.3rem, 4vw, 3rem);
   }
+  .social {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1366px) and (orientation: landscape) {
