@@ -598,5 +598,6 @@ button#github img {
   }
   nav ul li {
     margin-left: 0.01em;
+    margin-right: 0.01em;
   }
 }
