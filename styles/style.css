@@ -458,9 +458,10 @@ button#github img {
     cursor: pointer;
     z-index: 9999;
   }
-
+  .off-screen-menu ul li * {
+    color: rgb(0, 0, 0);
+  }
   .ham-menu span {
-    color: black;
     width: 100%;
     height: 5px;
     background: white;
