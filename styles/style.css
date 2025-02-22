@@ -526,8 +526,8 @@ button#github img {
 
   #scroll-down,
   #scroll-up {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
   }
   #scroll-up {
     left: 3em;
