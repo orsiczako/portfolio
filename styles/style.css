@@ -593,11 +593,9 @@ button#github img {
   .information > .nav-links > .nav-item {
     font-size: 0.01em;
   }
-  .social > ul > li {
+  .social ul li {
     font-size: 0.01em;
-  }
-  nav ul li {
-    margin-left: 0.01em;
-    margin-right: 0.01em;
+    margin: 0%;
+    padding: 0.1em;
   }
 }
