@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @import url(about_style.css);
+
 html,
 body {
   margin: 0;
@@ -23,6 +24,42 @@ body {
   background-size: 600% 600%;
   animation: gradientAnimation 10s ease infinite;
   scroll-behavior: smooth;
+}
+.cursor-glow {
+  position: fixed;
+  width: 130px; /* Diszkrétebb méret */
+  height: 130px;
+  background: radial-gradient(
+    circle,
+    rgba(232, 180, 209, 0.18) 0%,
+    rgba(163, 141, 153, 0.226) 10%,
+    /* Halványabb belső szín */ rgba(245, 170, 210, 0.17) 20%,
+    /* Lágy világos rózsaszín */ rgba(235, 140, 190, 0.19) 40%,
+    /* Melegebb rózsaszín */ rgba(225, 120, 175, 0.16) 60%,
+    /* Közép-rózsaszín átmenet */ rgba(215, 110, 165, 0.1) 80%,
+    /* Finom lilás beütés */ rgba(225, 120, 175, 0.04) 90%,
+    /* Enyhe rózsaszín kifutás */ rgba(200, 100, 150, 0) 100%
+      /* Teljes elhalványulás a szélén */
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease, width 0.3s ease, height 0.3s ease;
+  z-index: 9999;
+
+  /* Lágyabb, fokozatos szórás a vonal eltüntetéséhez */
+  box-shadow: 0 0 60px rgba(235, 120, 180, 0.17),
+    0 0 120px rgba(240, 150, 200, 0.15), 0 0 180px rgba(220, 100, 160, 0.12);
+}
+
+.cursor-glow:hover {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 1),
+    0 0 100px rgba(255, 255, 255, 0.7), 0 0 150px rgba(255, 255, 255, 0.5),
+    15px 15px 60px rgba(255, 255, 255, 0.6),
+    -15px -15px 60px rgba(255, 255, 255, 0.5);
 }
 
 .section {
