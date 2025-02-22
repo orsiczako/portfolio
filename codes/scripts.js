@@ -126,3 +126,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  let glow = document.querySelector(".cursor-glow");
+
+  if (!glow) {
+    glow = document.createElement("div");
+    glow.classList.add("cursor-glow");
+    document.body.appendChild(glow);
+    console.log("cursor-glow létrehozva!");
+  }
+
+  document.addEventListener("mousemove", (e) => {
+    glow.style.left = `${e.clientX}px`;
+    glow.style.top = `${e.clientY}px`;
+    glow.style.transform = "translate(-50%, -50%)";
+  });
+});
