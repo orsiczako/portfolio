@@ -571,10 +571,10 @@ button#github img {
     margin-top: 5em;
   }
   .header h1 {
-    font-size: clamp(5.5rem, 6vw, 8rem);
+    font-size: clamp(5rem, 6vw, 8rem);
   }
   .header h3 {
-    font-size: clamp(2.8rem, 4vw, 3rem);
+    font-size: clamp(2.3rem, 4vw, 3rem);
   }
 }
 
