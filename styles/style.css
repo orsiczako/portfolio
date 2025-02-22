@@ -590,12 +590,10 @@ button#github img {
   .me {
     display: block;
   }
-  .information > .nav-links > .nav-item {
-    font-size: 0.01em;
-  }
-  .social ul li {
-    font-size: 0.01em;
-    margin: 0%;
-    padding: 0.1em;
+  .social {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    justify-content: center;
   }
 }
