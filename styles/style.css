@@ -33,7 +33,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -228,18 +227,26 @@ button#github img {
   /*border: 2px solid red;*/ /* Láthatóvá teszi a méreteket */
 }
 
-.header-container {
+.content {
   display: grid;
   grid-template-areas:
     "name picture"
     "name picture"
     "quote picture"
     "writer writer"; /* C teljes szélességben */
+  grid-template-columns: 1.5fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 1em;
 }
-
+.header-container {
+  flex-direction: column;
+}
 .header {
   grid-area: name;
-  flex-direction: column;
   animation: color-change 8s infinite;
   font-weight: normal;
   /*Legyen középen*/
@@ -259,24 +266,25 @@ button#github img {
   flex-wrap: wrap;
   max-width: 100%;
   align-self: flex-start;
+  max-width: 79%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .me {
   grid-area: picture;
   height: auto;
-  max-width: 90%;
-  padding-top: 6.5em;
-  flex-grow: 2;
-  margin-left: 2.5em;
+  max-width: 45%;
+  margin-top: 2em;
+  flex-grow: 1;
+  object-fit: contain;
 }
 
 .header h1 {
   font-size: clamp(2rem, 5.5vw, 6rem);
-  margin-left: 1em;
 }
 .header h3 {
-  margin-left: 1em;
-  font-size: clamp(2rem, 5vw, 2rem);
+  font-size: clamp(1rem, 3vw, 2rem);
 }
 
 #quote {
@@ -284,7 +292,7 @@ button#github img {
   font-size: 2em;
   margin-top: 1em;
   margin-bottom: 1.8em;
-  width: 125%;
+  margin-left: 1em;
 }
 #writer {
   grid-area: writer;
@@ -306,7 +314,7 @@ button#github img {
   z-index: 1000;
 }
 #scroll-up {
-  left: 3dvi;
+  left: 3em;
   background-color: #744ab2;
 }
 #scroll-down {

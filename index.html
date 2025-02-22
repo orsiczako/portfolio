@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
     <title>Czakó Orsolya</title>
     <link rel="icon" href="./images/logo_new.png" type="image/png" />
   </head>
@@ -27,20 +29,23 @@
         <li>
           <a href="#about"><button class="info">Tapasztalat</button></a>
         </li>
-        
-        <li><a href="#qualifications"><button class="info">Képesítések</button></a></li>
+        <li>
+          <a href="#qualifications"
+            ><button class="info">Képesítések</button></a
+          >
+        </li>
         <li>
           <a href="#contact"><button class="info">Kapcsolat</button></a>
         </li>
         <li>
-          <a href="./codes/maintenance.html"><button class="info">Projektek</button></a>
+          <a href="./codes/maintenance.html"
+            ><button class="info">Projektek</button></a
+          >
         </li>
         <li><button class="info" id="EN">EN</button></li>
         <li><button class="info" id="HU">HU</button></li>
-
       </ul>
-
-    </div>  
+    </div>
     <section class="section" id="home">
       <nav>
         <div class="information">
@@ -51,18 +56,21 @@
             <li class="nav-item">
               <a href="#about"><button class="info">Tapasztalat</button></a>
             </li>
-            
-            <li class="nav-item"><a href="#qualifications"><button class="info">Képesítések</button></a></li>
+            <li class="nav-item">
+              <a href="#qualifications"
+                ><button class="info">Képesítések</button></a
+              >
+            </li>
             <li class="nav-item">
               <a href="#contact"><button class="info">Kapcsolat</button></a>
             </li>
             <li class="nav-item">
-              <a href="./codes/maintenance.html"><button class="info">Projektek</button></a>
+              <a href="./codes/maintenance.html"
+                ><button class="info">Projektek</button></a
+              >
             </li>
           </ul>
         </div>
-
-
         <div class="social">
           <ul class="nav-links">
             <li class="nav-item"><button class="info" id="EN">EN</button></li>
@@ -82,34 +90,34 @@
             </li>
           </ul>
         </div>
-
-        
       </nav>
-      
-      <div class="header-container">
-        <div class="header">
-          <h1>Czakó Orsolya</h1>
-          <h3>&lt;Software Engineer/&gt;</h3>
-        </div>
+      <div class="content">
+        <div class="header-container">
+          <div class="header">
+            <h1>Czakó Orsolya</h1>
+            <h3>&lt;Software Engineer/&gt;</h3>
+          </div>
+
           <div class="quote-container">
             <h1 id="quote" style="color: white">
               “Egy bug nem hiba, hanem váratlan funkció!”
             </h1>
             <h3 id="writer" style="color: grey">
-              -Egy nagyon bölcs programozó <span></button></a></span>
+              -Egy nagyon bölcs programozó
             </h3>
-            
           </div>
-        
+        </div>
+
         <img
           class="me"
+          id="me"
           src="./images/me_myself_and_i.png"
           alt="Czakó Orsolya ül az avarban"
           title="Czakó Orsolya"
         />
       </div>
-      </div>
     </section>
+
     <section id="section2" class="section">
       <span id="line"></span>
       <div id="experience">
@@ -120,43 +128,46 @@
           <h2 id="exp-title">Tapasztalat</h2>
           <a href="./images/CV.pdf" download>
             <button id="cv">
-              <span>Önéletrajz</span> 
+              <span>Önéletrajz</span>
             </button>
           </a>
-          
         </div>
         <div class="timelines">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-line"></div>
+          <div class="timeline" id="first-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
               <div class="timeline-content">
                 <h3>Course Instructor</h3>
                 <p class="date">2024. szept. - 2025. jún.</p>
-                <p>• Primarily lead Python courses, covering topics from basic programming to advanced object-oriented concepts. The curriculum progresses to object-oriented programming and eventually includes game development with Python and Pygame.
-                  <br>
-                  <br>
-                 • Conduct demonstration sessions to highlight key concepts and techniques, giving participants a clear understanding of how the course is structured.</p>
+                <p>
+                  • Primarily lead Python courses, covering topics from basic
+                  programming to advanced object-oriented concepts. The
+                  curriculum progresses to object-oriented programming and
+                  eventually includes game development with Python and Pygame.
+                  <br /><br />
+                  • Conduct demonstration sessions to highlight key concepts and
+                  techniques, giving participants a clear understanding of how
+                  the course is structured.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-line"></div>
+          <div class="timeline" id="second-timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-line"></div>
               <div class="timeline-content">
                 <h3>Software Engineer at your company</h3>
-                <p class="date">2025. - </p>
+                <p class="date">2025. -</p>
                 <p>Please hire me!</p>
-                  
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
     </section>
-    
-    
+
     <section id="section3" class="section">
       <div id="qualifications">
         <div data-en class="title" style="display: none">
@@ -171,12 +182,8 @@
               <h2>Programtervező informatikus</h2>
             </div>
             <div class="qualification-info">
-              <p>
-                Debreceni Egyetem, Informatikai Kar
-              </p>
-              <p>
-                2023-2026
-              </p>
+              <p>Debreceni Egyetem, Informatikai Kar</p>
+              <p>2023-2026</p>
             </div>
           </div>
           <div class="qualification">
@@ -184,19 +191,16 @@
               <h2>Érettségi</h2>
             </div>
             <div class="qualification-info">
-              <p>
-                Csokonai Vitéz Mihály Gimnázium
-              </p>
-              <p>
-                2019-2023
-              </p>
+              <p>Csokonai Vitéz Mihály Gimnázium</p>
+              <p>2019-2023</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <section id="section4" class="section">
-      <div id="qualifications"></div>
+      <div id="contact-info">
         <div data-en class="title" style="display: none">
           <h1>Contact</h1>
         </div>
@@ -210,6 +214,7 @@
         </div>
       </div>
     </section>
+
     <script src="./codes/scripts.js"></script>
     <button id="scroll-down"></button>
     <button id="scroll-up"></button>
