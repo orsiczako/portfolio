@@ -303,14 +303,15 @@ button#github img {
 }
 #scroll-down,
 #scroll-up {
-  display: block;
+  display: flex;
   position: fixed;
   bottom: 2em;
   transform: translateX(-50%);
   width: 4em;
   height: 4em;
   border-radius: 50%;
-
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   cursor: pointer;
   z-index: 1000;
@@ -328,12 +329,16 @@ button#github img {
   content: "\21E1";
   font-size: 1.5em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 #scroll-down::before {
   content: "\21E3";
   font-size: 1.5em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
 
