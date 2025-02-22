@@ -101,6 +101,7 @@ nav {
 
 .information * {
   margin: 0 0.6em;
+  display: flex;
 }
 
 .information ul {
