@@ -416,6 +416,9 @@ button#github img {
 }
 
 @media screen and (max-width: 767px) {
+  .cursor-glow {
+    display: none;
+  }
   html,
   body {
     overflow-x: hidden;
