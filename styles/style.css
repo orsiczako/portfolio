@@ -32,14 +32,13 @@ body {
   background: radial-gradient(
     circle,
     rgba(232, 180, 209, 0.18) 0%,
-    rgba(163, 141, 153, 0.226) 10%,
-    /* Halványabb belső szín */ rgba(245, 170, 210, 0.17) 20%,
-    /* Lágy világos rózsaszín */ rgba(235, 140, 190, 0.19) 40%,
-    /* Melegebb rózsaszín */ rgba(225, 120, 175, 0.16) 60%,
-    /* Közép-rózsaszín átmenet */ rgba(215, 110, 165, 0.1) 80%,
-    /* Finom lilás beütés */ rgba(225, 120, 175, 0.04) 90%,
-    /* Enyhe rózsaszín kifutás */ rgba(200, 100, 150, 0) 100%
-      /* Teljes elhalványulás a szélén */
+    rgba(163, 141, 153, 0.176) 10%,
+    rgba(245, 170, 210, 0.17) 20%,
+    rgba(235, 140, 190, 0.19) 40%,
+    rgba(225, 120, 175, 0.16) 60%,
+    rgba(215, 110, 165, 0.1) 80%,
+    rgba(225, 120, 175, 0.04) 90%,
+    rgba(200, 100, 150, 0) 100%
   );
   border-radius: 50%;
   pointer-events: none;
@@ -48,7 +47,6 @@ body {
   transition: transform 0.08s ease, width 0.3s ease, height 0.3s ease;
   z-index: 9999;
 
-  /* Lágyabb, fokozatos szórás a vonal eltüntetéséhez */
   box-shadow: 0 0 60px rgba(235, 120, 180, 0.17),
     0 0 120px rgba(240, 150, 200, 0.15), 0 0 180px rgba(220, 100, 160, 0.12);
 }
@@ -74,28 +72,23 @@ body {
   overflow: hidden;
 }
 
-/* Amikor egy section látható lesz */
 .section.active {
   opacity: 1;
 }
 
-/* Az első section (home) balról beúszik betöltéskor */
 #home {
   opacity: 0;
-  transition: opacity 1s ease-in-out; /* Lágy halványodás */
+  transition: opacity 1s ease-in-out;
 }
 
-/* Amikor az oldal betöltődik, a home megjelenik */
 #home.show {
   opacity: 1;
 }
 
-/* Amikor a home kikerül a nézetből, elhalványul */
 #home.fade-out {
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
 }
-/* Az első szekció (home) kezdetben láthatatlan */
 
 @keyframes gradientAnimation {
   0% {
