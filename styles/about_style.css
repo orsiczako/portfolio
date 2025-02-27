@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   text-decoration: none;
 }
 
 #section2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -35,19 +40,19 @@
   }
 }
 #line {
-  margin: 1em auto;
+  margin: 0.1em auto;
   width: 30%;
   padding: 0.1em;
   height: 13px;
   background: linear-gradient(
     to right,
     #f8d7e3,
-    /* Világos pasztell rózsaszín */ #f4b6cf,
-    /* Lágy rózsaszín */ #eaa0bc,
-    /* Közepes pasztell pink */ #d3a3d6,
-    /* Halvány levendula */ #d392d9,
-    /* Pasztell lila */ #9f7fc7,
-    /* Mélyebb lila tónus */ #866bb5 /* Finom, tompább pasztell lila */
+    #f4b6cf,
+    #eaa0bc,
+    #d3a3d6,
+    #d392d9,
+    #9f7fc7,
+    #866bb5
   );
 
   background-size: 400% 400%;
@@ -59,38 +64,35 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 .timeline-line {
   position: absolute;
-  height: 70%;
-  width: 2px;
+  height: 100%;
+  width: 3px;
   background-color: #373737;
-  top: 10%;
-  left: 1%;
+  margin-left: -1.7em;
 }
-
-.title {
-  top: 0;
-}
-.title * {
+.title-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  word-break: break-all;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -2em;
 }
 #exp-title {
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: 450;
   color: #bc3373;
-  top: 0.3em;
-  align-self: center;
 }
 #cv {
-  padding: 0.7em;
-  border-radius: 1em;
+  padding: 0.8em 1.5em;
+  border-radius: 1.2em;
   width: 13%;
-  font-size: 1em;
-  font-family: "JetBrains Mono", serif;
+  font-size: 1.2em;
   background-color: #000000;
   font-weight: 500;
   text-align: center;
@@ -98,12 +100,14 @@
   transition: all 0.5s ease-in-out;
   margin: 0.5em;
   width: auto;
+  border-color: #bc3373;
 }
 
 #cv span {
   color: rgb(255, 255, 255);
   display: inline-block;
-
+  font-weight: 500;
+  letter-spacing: 0.1em;
   transition: transform 0.4s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -133,7 +137,8 @@
   font-size: 1.5em;
 }
 
-#cv:hover::after {
+#cv:hover::after,
+#cv:focus::after {
   opacity: 1;
 }
 #exp-content,
@@ -145,6 +150,10 @@
   margin: 0 auto;
   overflow: auto;
 }
+.description {
+  margin-left: 1em;
+  position: relative;
+}
 
 .timeline {
   position: relative;
@@ -152,22 +161,12 @@
   width: 95%; /* Take up most of the width on smaller screens */
   padding: 0.5em 0.3em;
   border-radius: 8px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7),
-    inset -3px -3px 5px rgba(255, 255, 255, 0.05),
-    inset 3px 3px 5px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  background-color: #000000;
 }
 .timeline:hover {
   transform: scale(1.02);
-  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.9),
-    inset -3px -3px 7px rgba(255, 255, 255, 0.1),
-    inset 3px 3px 7px rgba(0, 0, 0, 0.6);
-}
-#first-timeline {
-  background-color: #8f788d;
-}
-#second-timeline {
-  background-color: #bd99a2;
+  box-shadow: 0 5px 10px rgba(219, 123, 171, 0.8);
 }
 
 .timeline-item {
@@ -177,13 +176,22 @@
   padding-left: 2em;
 }
 
-.timeline-content:first-child {
-  margin-top: 1%;
+.role {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: #bc3373;
+  margin: 0.6em;
+  margin-left: -0.5em;
 }
 
 .date {
-  font-size: 1.5em;
-  color: #292828;
+  font-size: 1em;
+  color: #3c3b3b;
+  font-weight: 500;
+}
+.text {
+  font-weight: 400;
+  color: #ffffff;
 }
 
 #cv:hover {
@@ -197,6 +205,7 @@
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  margin-top: 2em;
 }
 
 .timeline-container {
@@ -210,6 +219,17 @@
   justify-self: start;
   width: 100%;
 }
+.about-title {
+  font-size: 2em;
+  font-weight: 450;
+  color: #bc3373;
+  justify-self: center;
+}
+.about-info {
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 0.5em;
+}
 
 @media screen and (max-width: 768px) {
   .timeline {
@@ -222,7 +242,7 @@
     transform: none;
   }
   .timeline-content h3 {
-    font-size: 1.2em; /* Kisebb cím */
+    font-size: 1.2em;
   }
   .date {
     font-size: 1em; /* Kisebb dátum */
