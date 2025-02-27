@@ -242,4 +242,8 @@
   .timeline-content {
     width: 100%;
   }
+  #all-exp {
+    display: flex;
+    flex-direction: column;
+  }
 }
