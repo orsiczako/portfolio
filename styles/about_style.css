@@ -10,7 +10,7 @@
   align-items: center;
   min-height: 100vh; /* Nem fix magasság, hanem minimum 100vh */
   height: auto; /* Növekedhet a tartalommal együtt */
-  background: radial-gradient(
+  /*background: radial-gradient(
     circle,
     #d1b0d0,
     #c1a1b1,
@@ -20,7 +20,7 @@
     #6e4c59
   );
   background-size: 400% 400%;
-  animation: waveBackground 15s ease-in-out infinite;
+  animation: waveBackground 15s ease-in-out infinite;*/
 }
 
 @keyframes waveBackground {
@@ -39,7 +39,19 @@
   width: 30%;
   padding: 0.1em;
   height: 13px;
-  background-color: rgb(20, 19, 20);
+  background: linear-gradient(
+    to right,
+    #f8d7e3,
+    /* Világos pasztell rózsaszín */ #f4b6cf,
+    /* Lágy rózsaszín */ #eaa0bc,
+    /* Közepes pasztell pink */ #d3a3d6,
+    /* Halvány levendula */ #d392d9,
+    /* Pasztell lila */ #9f7fc7,
+    /* Mélyebb lila tónus */ #866bb5 /* Finom, tompább pasztell lila */
+  );
+
+  background-size: 400% 400%;
+  animation: waveBackground 5s ease-in-out infinite;
   text-align: center;
   border-radius: 7em;
   position: absolute;
@@ -69,7 +81,7 @@
 #exp-title {
   font-size: 2.5em;
   font-weight: 450;
-  color: #000000;
+  color: #bc3373;
   top: 0.3em;
   align-self: center;
 }
@@ -124,7 +136,7 @@
 #cv:hover::after {
   opacity: 1;
 }
-#experience,
+#exp-content,
 .timelines {
   display: flex;
   flex-direction: column;
@@ -140,8 +152,16 @@
   width: 95%; /* Take up most of the width on smaller screens */
   padding: 0.5em 0.3em;
   border-radius: 8px;
-  border: #000000 2px solid;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.05),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+}
+.timeline:hover {
+  transform: scale(1.02);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.9),
+    inset -3px -3px 7px rgba(255, 255, 255, 0.1),
+    inset 3px 3px 7px rgba(0, 0, 0, 0.6);
 }
 #first-timeline {
   background-color: #8f788d;
@@ -169,6 +189,28 @@
 #cv:hover {
   transform: scale(1.1);
 }
+#all-exp {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Két egyenlő oszlop */
+  gap: 2em; /* Távolság a két oszlop között */
+  align-items: start;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.timeline-container {
+  grid-column: 1 / 2; /* Bal oldal */
+  justify-self: start;
+  width: 100%;
+}
+
+.about-container {
+  grid-column: 2 / 3; /* Jobb oldal */
+  justify-self: start;
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .timeline {
     padding: 0.1em;
