@@ -142,26 +142,49 @@ document.addEventListener("DOMContentLoaded", function () {
     glow.style.transform = "translate(-50%, -50%)";
   });
 });
-function createRipple(x, y) {
-  const ripple = document.createElement("div");
-  ripple.classList.add("ripple");
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.addEventListener("click", function (event) {
+    createRipple(event);
+  });
 
-  ripple.style.left = `${x}px`;
-  ripple.style.top = `${y}px`;
+  function createRipple(event) {
+    const target = event.target.closest(".section");
 
-  document.body.appendChild(ripple);
+    const ripple = document.createElement("div");
+    ripple.classList.add("ripple");
 
-  setTimeout(() => {
-    ripple.remove();
-  }, 600); // ugyanannyi mint az animáció hossza
-}
+    const rect = target.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
 
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+
+    target.appendChild(ripple);
+
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  }
+});
+
+// Touchstart és click események kezelése
 function handleInteraction(event) {
   const touch = event.touches ? event.touches[0] : event;
   createRipple(touch.clientX, touch.clientY);
 }
 
-// Egér kattintásra is működik
 document.body.addEventListener("click", handleInteraction);
-// Érintéses eseményre mobilon
 document.body.addEventListener("touchstart", handleInteraction);
+
+// Toggle gombok
+document.querySelectorAll(".toggle-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const description = this.nextElementSibling;
+    description.classList.toggle("show-description");
+
+    this.style.transform = description.classList.contains("show-description")
+      ? "rotate(180deg)"
+      : "rotate(0deg)";
+  });
+});
