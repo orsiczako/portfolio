@@ -142,3 +142,26 @@ document.addEventListener("DOMContentLoaded", function () {
     glow.style.transform = "translate(-50%, -50%)";
   });
 });
+function createRipple(x, y) {
+  const ripple = document.createElement("div");
+  ripple.classList.add("ripple");
+
+  ripple.style.left = `${x}px`;
+  ripple.style.top = `${y}px`;
+
+  document.body.appendChild(ripple);
+
+  setTimeout(() => {
+    ripple.remove();
+  }, 600); // ugyanannyi mint az animáció hossza
+}
+
+function handleInteraction(event) {
+  const touch = event.touches ? event.touches[0] : event;
+  createRipple(touch.clientX, touch.clientY);
+}
+
+// Egér kattintásra is működik
+document.body.addEventListener("click", handleInteraction);
+// Érintéses eseményre mobilon
+document.body.addEventListener("touchstart", handleInteraction);

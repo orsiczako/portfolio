@@ -8,6 +8,7 @@ body {
   padding: 0;
   width: 100%;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -27,7 +28,7 @@ body {
 }
 .cursor-glow {
   position: fixed;
-  width: 130px; /* Diszkrétebb méret */
+  width: 130px;
   height: 130px;
   background: radial-gradient(
     circle,
@@ -416,6 +417,31 @@ button#github img {
 }
 
 @media screen and (max-width: 767px) {
+  .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    animation: rippleEffect 0.6s ease-out forwards;
+  }
+
+  @keyframes rippleEffect {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
   .cursor-glow {
     display: none;
   }
@@ -427,6 +453,7 @@ button#github img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    touch-action: manipulation;
   }
 
   .header-container {
@@ -617,7 +644,35 @@ button#github img {
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1366px) and (orientation: portrait) {
+  .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    animation: rippleEffect 0.6s ease-out forwards;
+  }
+
+  @keyframes rippleEffect {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
   .me {
+    display: none;
+  }
+  .cursor-glow {
     display: none;
   }
   .quote-container {
@@ -639,8 +694,36 @@ button#github img {
 }
 
 @media screen and (min-width: 600px) and (max-width: 1366px) and (orientation: landscape) {
+  .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    animation: rippleEffect 0.6s ease-out forwards;
+  }
+
+  @keyframes rippleEffect {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
   .me {
     display: block;
+  }
+  .cursor-glow {
+    display: none;
   }
   .social {
     position: absolute;
