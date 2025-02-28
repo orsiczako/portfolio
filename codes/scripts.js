@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Touchstart és click események kezelése
 function handleInteraction(event) {
   const touch = event.touches ? event.touches[0] : event;
   createRipple(touch.clientX, touch.clientY);
@@ -177,7 +176,6 @@ function handleInteraction(event) {
 document.body.addEventListener("click", handleInteraction);
 document.body.addEventListener("touchstart", handleInteraction);
 
-// Toggle gombok
 document.querySelectorAll(".toggle-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     const description = this.nextElementSibling;
