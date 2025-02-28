@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @import url(about_style.css);
+@import url(qualification_style.css);
+@import url(contact_style.css);
 
 html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
+  position: relative;
 }
 
 html {
@@ -624,7 +627,7 @@ button#github img {
     background: white;
     transition: all 0.3s ease-in-out;
     border-radius: 1em;
-    background-color: rgb(109, 23, 109);
+    background-color: #bc3373;
     z-index: 9999;
   }
 
