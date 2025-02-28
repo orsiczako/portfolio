@@ -416,6 +416,96 @@ button#github img {
   left: 0; /* Beúszik a képernyőre */
 }
 
+@media screen and (min-width: 600px) and (max-width: 1366px) and (orientation: portrait) {
+  .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    animation: rippleEffect 0.6s ease-out forwards;
+  }
+
+  @keyframes rippleEffect {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+  .me {
+    display: none;
+  }
+  .cursor-glow {
+    display: none;
+  }
+  .quote-container {
+    text-align: center;
+    margin-top: 5em;
+  }
+  .header h1 {
+    font-size: clamp(4.5rem, 6vw, 8rem);
+  }
+  .header h3 {
+    font-size: clamp(2.3rem, 4vw, 3rem);
+  }
+  .social {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1366px) and (min-height: 600px) and (orientation: landscape) {
+  .ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    animation: rippleEffect 0.6s ease-out forwards;
+  }
+
+  @keyframes rippleEffect {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+
+  .me {
+    display: block;
+  }
+  .cursor-glow {
+    display: none;
+  }
+  .social {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 767px) {
   .ripple {
     position: absolute;
@@ -643,92 +733,36 @@ button#github img {
     display: visible;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 1366px) and (orientation: portrait) {
-  .ripple {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 105, 180, 0.6);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0);
-    animation: rippleEffect 0.6s ease-out forwards;
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  html,
+  body,
+  section {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: visible !important;
   }
 
-  @keyframes rippleEffect {
-    0% {
-      transform: translate(-50%, -50%) scale(0);
-      opacity: 1;
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(1.5);
-      opacity: 0.8;
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(2);
-      opacity: 0;
-    }
-  }
-  .me {
-    display: none;
+  section {
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
   .cursor-glow {
     display: none;
   }
-  .quote-container {
-    text-align: center;
-    margin-top: 5em;
-  }
-  .header h1 {
-    font-size: clamp(4.5rem, 6vw, 8rem);
-  }
-  .header h3 {
-    font-size: clamp(2.3rem, 4vw, 3rem);
-  }
-  .social {
-    position: absolute;
-    bottom: 1em;
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width: 1366px) and (orientation: landscape) {
-  .ripple {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 105, 180, 0.6);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0);
-    animation: rippleEffect 0.6s ease-out forwards;
-  }
-
-  @keyframes rippleEffect {
-    0% {
-      transform: translate(-50%, -50%) scale(0);
-      opacity: 1;
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(1.5);
-      opacity: 0.8;
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(2);
-      opacity: 0;
-    }
-  }
   .me {
-    display: block;
-  }
-  .cursor-glow {
     display: none;
   }
-  .social {
-    position: absolute;
-    bottom: 1em;
-    width: 100%;
-    justify-content: center;
+  .header-container {
+    margin-top: 20%;
+  }
+  #scroll-down,
+  #scroll-up {
+    width: 3em;
+    height: 3em;
+    display: flex;
   }
 }
