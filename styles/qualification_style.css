@@ -1,0 +1,36 @@
+#section3 {
+  position: relative; /* Biztosítsd, hogy relatív legyen */
+  min-height: 100vh;
+  height: auto;
+}
+
+.cert {
+  display: flex;
+}
+
+.cert-description {
+  display: none;
+  border: 1px solid #ccc;
+}
+
+.show-description {
+  display: block;
+}
+
+.certifications ul {
+  list-style: none;
+}
+.cert-link {
+  display: flex;
+  align-items: center;
+}
+
+.cert-image {
+  width: 4em;
+  height: em;
+}
+
+.cert-text {
+  font-size: 16px; /* Ha kell, módosíthatod */
+  font-weight: bold;
+}
