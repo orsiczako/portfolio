@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="color-scheme" content="light">
+    <meta name="color-scheme" content="light" />
     <!-- For now I will block dark mode, i noticed that the content looks different with dark mode, however I'm planning to add
      both light and dark mode for this website-->
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
@@ -52,20 +52,43 @@
         <div class="information">
           <ul class="nav-links">
             <li class="nav-item">
-              <a href="#home"><button class="info">Kezdőlap</button></a>
+              <a href="#home"
+                ><button class="info">
+                  <span class="class-hu">Kezdőlap</span
+                  ><span class="class-en">Home</span>
+                </button></a
+              >
             </li>
             <li class="nav-item">
-              <a href="#section2"><button class="info">Tapasztalat</button></a>
+              <a href="#section2"
+                ><button class="info">
+                  <span class="class-hu">Tapasztalat</span
+                  ><span class="class-en">Experience</span>
+                </button></a
+              >
             </li>
             <li class="nav-item">
-              <a href="#section3"><button class="info">Képesítések</button></a>
+              <a href="#section3"
+                ><button class="info">
+                  <span class="class-hu">Képesítések</span
+                  ><span class="class-en">Qualifications</span>
+                </button></a
+              >
             </li>
             <li class="nav-item">
-              <a href="#section4"><button class="info">Kapcsolat</button></a>
+              <a href="#section4"
+                ><button class="info">
+                  <span class="class-hu">Kapcsolat</span
+                  ><span class="class-en">Contact</span>
+                </button></a
+              >
             </li>
             <li class="nav-item">
               <a href="./codes/maintenance.html"
-                ><button class="info">Projektek</button></a
+                ><button class="info">
+                  <span class="class-hu">Projektek</span
+                  ><span class="class-en">Projects</span>
+                </button></a
               >
             </li>
           </ul>
@@ -96,17 +119,21 @@
             <h1>Czakó Orsolya</h1>
             <h3>&lt;Software Engineer/&gt;</h3>
           </div>
-
           <div class="quote-container">
             <h1 id="quote" style="color: white">
-              “Egy bug nem hiba, hanem váratlan funkció!”
+              <span class="class-hu"
+                >“Egy bug nem hiba, hanem váratlan funkció!”</span
+              >
+              <span class="class-en"
+                >“A bug is not a defect, it’s an unexpected feature!”</span
+              >
             </h1>
             <h3 id="writer" style="color: grey">
-              -Egy nagyon bölcs programozó
+              <span class="class-hu">-Egy nagyon bölcs programozó</span>
+              <span class="class-en">-A very wise programmer</span>
             </h3>
           </div>
         </div>
-
         <img
           class="me"
           id="me"
@@ -116,80 +143,147 @@
         />
       </div>
     </section>
-
     <section id="section2" class="section">
       <span id="line"></span>
       <div id="experience">
-        <div data-en class="title" style="display: none">
-          <h2 id="exp-title">Experience</h2>
-        </div>
-        <div data-hu class="title">
-          <h2 id="exp-title">Tapasztalat</h2>
+        <div class="title">
+          <h2 id="exp-title">
+            <span class="class-en" style="display: none">Experience</span>
+            <span class="class-hu">Tapasztalat</span>
+          </h2>
           <a href="./images/CV.pdf" download>
             <button id="cv">
-              <span>Önéletrajz</span>
+              <span class="class-en" style="display: none">CV</span>
+              <span class="class-hu">Önéletrajz</span>
             </button>
           </a>
         </div>
         <div id="all-exp">
-        <div class="timeline-container">
-          <article class="timelines">
-            <article class="timeline" id="first-timeline">
-              <div class="timeline-item">
-                
-                <div class="timeline-content">
-                  <h3 class="role">Course Instructor</h3>
-                  <div class="description">
-                    <div class="timeline-line"></div>
-                    <p class="date">2024. szept. - 2025. jún.</p>
-
-                    <p class="text">
-                      • Primarily lead Python courses, covering topics from basic
-                      programming to advanced object-oriented concepts. The
-                      curriculum progresses to object-oriented programming and
-                      eventually includes game development with Python and Pygame.
+          <div class="timeline-container">
+            <article class="timelines">
+              <article class="timeline" id="first-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <h3 class="role">
+                      <span class="class-en" style="display: none"
+                        >Course Instructor</span
+                      >
+                      <span class="class-hu">Facilitátor</span>
+                    </h3>
+                    <div class="description">
+                      <div class="timeline-line"></div>
+                      <p class="date">2024. szept. - 2025. jún.</p>
+                      <p class="text">
+                        <span class="class-en" style="display: none">
+                          • Primarily lead Python courses, covering topics from
+                          basic programming to advanced object-oriented
+                          concepts. The curriculum progresses to object-oriented
+                          programming and eventually includes game development
+                          with Python and Pygame.
+                          <br /><br />
+                          • Conduct demonstration sessions to highlight key
+                          concepts and techniques, giving participants a clear
+                          understanding of how the course is structured.
+                        </span>
+                        <span class="class-hu">
+                          • Elsősorban Python kurzusokat vezettem, amelyek az
+                          alapvető programozási ismeretektől a haladó
+                          objektumorientált koncepciókig terjedtek. A tananyag
+                          fokozatosan haladt az objektumorientált programozás
+                          felé, és végül a Python és Pygame segítségével történő
+                          játékfejlesztést is magában foglalta.
+                          <br /><br />
+                          • Bemutató órákat tartottam, amelyek során kiemeltem a
+                          kulcsfontosságú fogalmakat és technikákat, így a
+                          résztvevők egyértelmű képet kaptak arról, hogyan épült
+                          fel a tanfolyam.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="timeline" id="second-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <h3 class="role">
+                      <span class="class-en" style="display: none"
+                        >Software Engineer at your company</span
+                      >
+                      <span class="class-hu">Szoftverfejlesztő a cégénél</span>
+                    </h3>
+                    <div class="description">
+                      <div class="timeline-line"></div>
+                      <p class="date">2025. -</p>
+                      <p class="text">
+                        <span class="class-en" style="display: none"
+                          >• Hire me!</span
+                        >
+                        <span class="class-hu">• </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </article>
+          </div>
+          <div class="about-container">
+            <article class="about-carrier">
+              <div class="about">
+                <div class="about-title">
+                  <h2>
+                    <span class="class-en" style="display: none">About me</span>
+                    <span class="class-hu">Rólam</span>
+                  </h2>
+                </div>
+                <div class="about-info">
+                  <p>
+                    <span class="class-en" style="display: none">
+                      I’m a Computer Science student at the University of
+                      Debrecen with a strong passion for technology and
+                      programming. I am constantly working on various projects
+                      to gain practical experience and improve my skills. Over
+                      the years, I’ve gained proficiency in languages such as
+                      HTML, CSS, JavaScript, Python, SQL, C++, C#, Java, and
+                      XML.
                       <br /><br />
-                      • Conduct demonstration sessions to highlight key concepts
-                      and techniques, giving participants a clear understanding of
-                      how the course is structured.
-                    </p>
-                </div>
+                      In addition to my academic studies, I actively pursue
+                      certifications to expand my knowledge in areas like cloud
+                      computing, cybersecurity, and data management. These
+                      certifications allow me to dive deeper into real-world
+                      systems, enhance my technical understanding, and stay
+                      updated with the latest industry trends.
+                      <br /><br />
+                      I believe in continuous learning and strive to become a
+                      versatile software developer with expertise in both
+                      frontend and backend development, while also having a
+                      solid understanding of modern technologies and security
+                      practices.
+                    </span>
+                    <span class="class-hu">
+                      A Debreceni Egyetem programtervező informatikus hallgatója
+                      vagyok, és folyamatosan fejlesztem képességeimet különböző
+                      projektekben. Jártasságot szereztem többek között a HTML,
+                      CSS, JavaScript, Python, SQL, C++, C#, Java és XML
+                      nyelvekben.
+                      <br /><br />
+                      Tanulmányaim mellett aktívan szerzek tanúsítványokat a
+                      felhőalapú számítástechnika, kibervédelem és adatkezelés
+                      területén. Ezek segítenek mélyebb technikai ismeretek
+                      megszerzésében és az iparági trendek követésében.
+                      <br /><br />
+                      Hiszek a folyamatos tanulásban, és arra törekszem, hogy
+                      sokoldalú szoftverfejlesztővé váljak, aki mind a frontend,
+                      mind a backend fejlesztésben jártas, miközben szilárd
+                      ismeretekkel rendelkezik a modern technológiákról és a
+                      biztonsági gyakorlatokról.
+                    </span>
+                  </p>
                 </div>
               </div>
             </article>
-            <article class="timeline" id="second-timeline">
-              <div class="timeline-item">
-
-                
-                <div class="timeline-content">
-                  <h3 class="role">Software Engineer at your company</h3>
-                  <div class="description">
-                    <div class="timeline-line"></div>
-                    <p class="date">2025. -</p>
-                    <p class="text">• Hire me!</p>
-                </div>
-                </div>
-              </div>
-            </article>
-          </article>
+          </div>
         </div>
-        <div class="about-container">
-          <article class="about-carrier">
-            <div class="about">
-              <div class="about-title">
-                <h2>About me</h2>
-              </div>
-              <div class="about-info">
-                <p>
-                  I’m a Computer Science student at the University of Debrecen with a strong passion for technology and programming. I am constantly working on various projects to gain practical experience and improve my skills. Over the years, I’ve gained proficiency in languages such as HTML, CSS, JavaScript, Python, SQL, C++, C#, Java, and XML.
-
-                  In addition to my academic studies, I actively pursue certifications to expand my knowledge in areas like cloud computing, cybersecurity, and data management. These certifications allow me to dive deeper into real-world systems, enhance my technical understanding, and stay updated with the latest industry trends.
-                  
-                  I believe in continuous learning and strive to become a versatile software developer with expertise in both frontend and backend development, while also having a solid understanding of modern technologies and security practices.
-                </p>
-          </article>
-        </div>
-      </div>
       </div>
     </section>
 
@@ -201,114 +295,210 @@
         <div data-hu class="title">
           <h1>Képesítések NOT FINAL, HAVEN'T EVEN STARTED THIS SECTION</h1>
         </div>
-        <div class="qualifications">
-          <div class="qualification">
-            <div class="qualification-title">
-              <h2>Programtervező informatikus</h2>
+        <div class="all-qualif">
+          <div class="qualifications">
+            <div class="qualification">
+              <div class="qualification-title">
+                <h2>Programtervező informatikus</h2>
+              </div>
+              <div class="qualification-info">
+                <p>Debreceni Egyetem, Informatikai Kar</p>
+                <p>2023-2026</p>
+              </div>
             </div>
-            <div class="qualification-info">
-              <p>Debreceni Egyetem, Informatikai Kar</p>
-              <p>2023-2026</p>
+            <div class="qualification">
+              <div class="qualification-title">
+                <h2>Érettségi</h2>
+              </div>
+              <div class="qualification-info">
+                <p>Csokonai Vitéz Mihály Gimnázium</p>
+                <p>2019-2023</p>
+              </div>
             </div>
           </div>
-          <div class="qualification">
-            <div class="qualification-title">
-              <h2>Érettségi</h2>
-            </div>
-            <div class="qualification-info">
-              <p>Csokonai Vitéz Mihály Gimnázium</p>
-              <p>2019-2023</p>
-            </div>
+          <div class="certifications">
+            <ul class="certs">
+              <div class="ITS">
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://www.credly.com/badges/1e9d6554-2fa9-4077-81a4-065a6fd5dd7b/public_url"
+                      class="cert-link"
+                    >
+                      <img
+                        src="./images/cybersecurity.png"
+                        alt="Cybersecurity badge"
+                        title="ITS-Cybersecurity"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">IT Specialist - Cybersecurity</p>
+                    </a>
+                  </div>
+                  <div class="cert-description">
+                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                  </div>
+                </li>
+
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://www.credly.com/badges/7b248281-8f3b-4046-94fa-1a2729b80def/public_url"
+                      class="cert-link"
+                      ><img
+                        src="./images/java.png"
+                        alt="Java badge"
+                        title="ITS-Java"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">IT Specialist - Java</p></a
+                    >
+                  </div>
+
+                  <div class="cert-description">
+                    <p>Szöveg</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://www.credly.com/badges/1e9d6554-2fa9-4077-81a4-065a6fd5dd7b/public_url"
+                      class="cert-link"
+                      ><img
+                        src="./images/html5.png"
+                        alt="HTML5 badge"
+                        title="IT Specialist - HTML5 Application Development"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        IT Specialist - HTML5 Application Development
+                      </p></a
+                    >
+                  </div>
+
+                  <div class="cert-description">
+                    <p>Szöveg</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://www.credly.com/badges/62b83b5e-d5a6-41a8-9341-c8596ebd4a7f/public_url"
+                      class="cert-link"
+                      ><img
+                        src="./images/html_css.png"
+                        alt="HTML and CSS badge"
+                        title="IT Specialist - HTML and CSS"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">IT Specialist - HTML and CSS</p></a
+                    >
+                  </div>
+
+                  <div class="cert-description">
+                    <p>Szöveg</p>
+                  </div>
+                </li>
+              </div>
+              <div class="Microsoft">
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://www.credly.com/badges/0658afa5-5b30-4333-8e21-ddc3cd42384d/public_url"
+                      class="cert-link"
+                      ><img
+                        src="./images/az.png"
+                        alt="Azure badge"
+                        title="Microsoft Certified: Azure Fundamentals"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        Microsoft Certified: Azure Fundamentals
+                      </p></a
+                    >
+                  </div>
+
+                  <div class="cert-description">
+                    <p>Szöveg</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://www.credly.com/badges/0658afa5-5b30-4333-8e21-ddc3cd42384d/public_url"
+                      class="cert-link"
+                      ><img
+                        src="./images/sc.png"
+                        alt="SC-900 badge"
+                        title="Microsoft Certified: Security, Compliance, and Identity Fundamentals"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        Microsoft Certified: Security, Compliance, and Identity
+                        Fundamentals
+                      </p></a
+                    >
+                  </div>
+
+                  <div class="cert-description">
+                    <p>Szöveg</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://www.credly.com/badges/0658afa5-5b30-4333-8e21-ddc3cd42384d/public_url"
+                      class="cert-link"
+                      ><img
+                        src="./images/dp.png"
+                        alt="DP-900 badge"
+                        title="Microsoft Certified: Azure Data Fundamentals"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        Microsoft Certified: Azure Data Fundamentals
+                      </p></a
+                    >
+                  </div>
+
+                  <div class="cert-description">
+                    <p>Szöveg</p>
+                  </div>
+                </li>
+              </div>
+              <div class="NVIDIA">
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://learn.nvidia.com/certificates?id=1OROcj_fTRSixVZTcjaX3w"
+                      class="cert-link"
+                    >
+                      <img
+                        src="./images/nvidia.png"
+                        alt="NVIDIA badge"
+                        title="NVIDIA - Fundamentals of Deep Learning"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        NVIDIA - Fundamentals of Deep Learning
+                      </p>
+                    </a>
+                  </div>
+                  <div class="cert-description">
+                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                  </div>
+                </li>
+              </div>
+            </ul>
           </div>
         </div>
-        <div class="certifications">
-          <ul class="certs">
-            <div class="ITS">
-              <li class="cert">
-                
-                <a href="https://www.credly.com/badges/1e9d6554-2fa9-4077-81a4-065a6fd5dd7b/public_url" class="cert-link"
-                  ><img src="./images/cybersecurity.png" alt="Cybersecurity badge" title="ITS-Cybersecurity" class="cert-image"
-                /><p class="cert-text">IT Specialist - Cybersecurity
-                </p></a>
-                <button class="toggle-btn">▼</button>
-                <div class="cert-description">
-                  <p>Szöveg</p>
-                </div>
-              </li>
-              <li class="cert">
-                
-                <a href="https://www.credly.com/badges/7b248281-8f3b-4046-94fa-1a2729b80def/public_url" class="cert-link"
-                  ><img src="./images/java.png" alt="Java badge" title="ITS-Java" class="cert-image"
-                /><p class="cert-text">IT Specialist - Java
-                </p></a>
-                <button class="toggle-btn">▼</button>
-                <div class="cert-description">
-                  <p>Szöveg</p>
-                </div>
-              </li>
-              <li class="cert">
-                
-                <a href="https://www.credly.com/badges/1e9d6554-2fa9-4077-81a4-065a6fd5dd7b/public_url" class="cert-link"
-                  ><img src="./images/html5.png" alt="HTML5 badge" title="IT Specialist - HTML5 Application Development" class="cert-image"
-                /><p class="cert-text">IT Specialist - HTML5 Application Development
-                </p></a>
-                <button class="toggle-btn">▼</button>
-                <div class="cert-description">
-                  <p>Szöveg</p>
-                </div>
-              </li>
-              <li class="cert">
-                
-                <a href="https://www.credly.com/badges/62b83b5e-d5a6-41a8-9341-c8596ebd4a7f/public_url" class="cert-link"
-                  ><img src="./images/html_css.png" alt="HTML and CSS badge" title="IT Specialist - HTML and CSS" class="cert-image"
-                /><p class="cert-text">IT Specialist - HTML and CSS
-                </p></a>
-                <button class="toggle-btn">▼</button>
-                <div class="cert-description">
-                  <p>Szöveg</p>
-                </div>
-              </li>
-              
-          </div>
-          <div class="Microsoft">
-            <li class="cert">  
-              <a href="https://www.credly.com/badges/0658afa5-5b30-4333-8e21-ddc3cd42384d/public_url" class="cert-link"
-                ><img src="./images/az.png" alt="Azure badge" title="Microsoft Certified: Azure Fundamentals" class="cert-image"
-              /><p class="cert-text">Microsoft Certified: Azure Fundamentals
-              </p></a>
-              <button class="toggle-btn">▼</button>
-              <div class="cert-description">
-                <p>Szöveg</p>
-              </div>
-            </li>
-            <li class="cert"> 
-              <a href="https://www.credly.com/badges/0658afa5-5b30-4333-8e21-ddc3cd42384d/public_url" class="cert-link"
-                ><img src="./images/sc.png" alt="SC-900 badge" title="Microsoft Certified: Security, Compliance, and Identity Fundamentals" class="cert-image"
-              /><p class="cert-text">Microsoft Certified: Security, Compliance, and Identity Fundamentals
-              </p></a>
-              <button class="toggle-btn">▼</button>
-              <div class="cert-description">
-                <p>Szöveg</p>
-              </div>
-            </li>
-            <li class="cert"> 
-              <a href="https://www.credly.com/badges/0658afa5-5b30-4333-8e21-ddc3cd42384d/public_url" class="cert-link"
-                ><img src="./images/dp.png" alt="DP-900 badge" title="Microsoft Certified: Azure Data Fundamentals" class="cert-image"
-              /><p class="cert-text">Microsoft Certified: Azure Data Fundamentals
-              </p></a>
-              <button class="toggle-btn">▼</button>
-              <div class="cert-description">
-                <p>Szöveg</p>
-              </div>
-            </li>
-          </div>
-          <div class="NVIDIA">
-              
-          </div>
-            
-          </ul>
-        </div>
-        
       </div>
     </section>
 
