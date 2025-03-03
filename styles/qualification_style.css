@@ -3,34 +3,78 @@
   min-height: 100vh;
   height: auto;
 }
+#qualifications {
+  display: flex;
+  flex-direction: column;
+}
+.all-qualif {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+}
+.qualifications {
+  display: flex;
+  flex-direction: column;
+  border-color: #733838;
+  border-width: 1px;
+  border-style: solid;
+}
+.certifications {
+  display: flex;
+  flex-direction: column;
+  border-color: #733838;
+  border-width: 1px;
+  border-style: solid;
+}
 
 .cert {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.cert-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.cert-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1; /* Kitölti a helyet, így minden egy sorban lesz */
+}
+
+.cert-image {
+  width: 4em;
+  height: auto;
+}
+
+.cert-text {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .cert-description {
   display: none;
   border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5px;
+  width: 90%;
 }
 
 .show-description {
   display: block;
-}
-
-.certifications ul {
-  list-style: none;
-}
-.cert-link {
-  display: flex;
-  align-items: center;
-}
-
-.cert-image {
-  width: 4em;
-  height: em;
-}
-
-.cert-text {
-  font-size: 16px; /* Ha kell, módosíthatod */
-  font-weight: bold;
 }
