@@ -142,31 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
     glow.style.transform = "translate(-50%, -50%)";
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
-  document.body.addEventListener("click", function (event) {
-    createRipple(event);
-  });
-
-  function createRipple(event) {
-    const target = event.target.closest(".section");
-
-    const ripple = document.createElement("div");
-    ripple.classList.add("ripple");
-
-    const rect = target.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-
-    ripple.style.left = `${x}px`;
-    ripple.style.top = `${y}px`;
-
-    target.appendChild(ripple);
-
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
-  }
-});
 
 function handleInteraction(event) {
   const touch = event.touches ? event.touches[0] : event;
@@ -178,11 +153,56 @@ document.body.addEventListener("touchstart", handleInteraction);
 
 document.querySelectorAll(".toggle-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
-    const description = this.nextElementSibling;
-    description.classList.toggle("show-description");
+    const description =
+      this.closest(".cert").querySelector(".cert-description");
 
-    this.style.transform = description.classList.contains("show-description")
-      ? "rotate(180deg)"
-      : "rotate(0deg)";
+    if (description) {
+      description.classList.toggle("show-description");
+
+      this.style.transform = description.classList.contains("show-description")
+        ? "rotate(180deg)"
+        : "rotate(0deg)";
+    }
   });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  // Válaszd ki az összes EN és HU gombot
+  const enButtons = document.querySelectorAll("#EN");
+  const huButtons = document.querySelectorAll("#HU");
+
+  if (!enButtons.length || !huButtons.length) {
+    console.error("EN vagy HU gomb nem található!");
+    return;
+  }
+
+  function setLanguage(lang) {
+    const huElements = document.querySelectorAll(".class-hu");
+    const enElements = document.querySelectorAll(".class-en");
+
+    if (lang === "hu") {
+      huElements.forEach((el) => (el.style.display = "inline"));
+      enElements.forEach((el) => (el.style.display = "none"));
+    } else {
+      huElements.forEach((el) => (el.style.display = "none"));
+      enElements.forEach((el) => (el.style.display = "inline"));
+    }
+  }
+
+  // Eseménykezelők mindegyik gombhoz
+  enButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      console.log("EN gomb megnyomva");
+      setLanguage("en");
+    });
+  });
+
+  huButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      console.log("HU gomb megnyomva");
+      setLanguage("hu");
+    });
+  });
+
+  // Alapértelmezett nyelv beállítása (EN)
+  setLanguage("en");
 });
