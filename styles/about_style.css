@@ -89,6 +89,7 @@
   color: #bc3373;
 }
 #cv {
+  position: relative;
   padding: 0.8em 1.5em;
   border-radius: 1.2em;
   width: 13%;
@@ -136,8 +137,7 @@
   font-size: 1.5em;
 }
 
-#cv:hover::after,
-#cv:focus::after {
+#cv:hover::after {
   opacity: 1;
 }
 #exp-content,
