@@ -610,8 +610,8 @@ button#github img {
   .ham-menu {
     position: fixed;
     margin: 1em;
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
