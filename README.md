@@ -17,9 +17,9 @@ The styles are organized into separate CSS files for each section:
 
 - **Home Section**: `styles/style.css`
 - **About Section**: `styles/about_style.css`
-- **Experience Section**: `styles/experience_style.css`
 - **Qualifications Section**: `styles/qualifications_style.css`
 - **Contact Section**: `styles/contact_style.css`
+- **Projects Section**: `styles/projects_style.css`
 
 This modular approach allows for easy updates and customization.
 
