@@ -15,7 +15,7 @@ Welcome to my personal portfolio website, designed to showcase my skills, projec
 
 The styles are organized into separate CSS files for each section:
 
-- **Home Section**: `styles/style.css`
+- **Home Section**: `style.css`
 - **About Section**: `styles/about_style.css`
 - **Qualifications Section**: `styles/qualifications_style.css`
 - **Contact Section**: `styles/contact_style.css`
