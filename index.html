@@ -19,6 +19,7 @@
     <link rel="icon" href="./images/logo_new.png" type="image/png" />
   </head>
   <body>
+    <div class="random-stripe"></div>
     <div class="ham-menu">
       <span></span>
       <span></span>
@@ -254,10 +255,9 @@
                       systems, enhance my technical understanding, and stay
                       updated with the latest industry trends.
                       <br /><br />
-                      I believe in continuous learning and strive to become a
-                      versatile software developer with expertise in both
-                      frontend and backend development, while also having a
-                      solid understanding of modern technologies and security
+                      I believe in continuous learning and aim to be a versatile
+                      software developer skilled in both frontend and backend,
+                      with a solid grasp of modern technologies and security
                       practices.
                     </span>
                     <span class="class-hu">
@@ -289,14 +289,25 @@
 
     <section id="section3" class="section">
       <div id="qualifications">
-        <div data-en class="title" style="display: none">
-          <h1>Qualifications</h1>
+        <div class="title" style="display: none">
+          <h1 class="data-en">Qualifications</h1>
         </div>
-        <div data-hu class="title">
-          <h1>Képesítések NOT FINAL, HAVEN'T EVEN STARTED THIS SECTION</h1>
+        <div class="title">
+          <h1 class="data-hu">
+            Képesítések NOT FINAL, HAVEN'T EVEN STARTED THIS SECTION
+          </h1>
         </div>
         <div class="all-qualif">
           <div class="qualifications">
+            <div class="qualification">
+              <div class="qualification-title">
+                <h2>Gimnázium</h2>
+              </div>
+              <div class="qualification-info">
+                <p>Csokonai Vitéz Mihály Gimnázium</p>
+                <p>2019-2023</p>
+              </div>
+            </div>
             <div class="qualification">
               <div class="qualification-title">
                 <h2>Programtervező informatikus</h2>
@@ -306,19 +317,21 @@
                 <p>2023-2026</p>
               </div>
             </div>
-            <div class="qualification">
-              <div class="qualification-title">
-                <h2>Érettségi</h2>
-              </div>
-              <div class="qualification-info">
-                <p>Csokonai Vitéz Mihály Gimnázium</p>
-                <p>2019-2023</p>
-              </div>
-            </div>
           </div>
           <div class="certifications">
             <ul class="certs">
               <div class="ITS">
+                <div class="cert-top" id="ITS">
+                  <button class="toggle-btn main-button">▼</button>
+                  <img
+                    src="./images/ITS-Logo.png"
+                    alt="ITS badge"
+                    title="ITS"
+                    class="cert-image"
+                  />
+                  <p class="class-en">ITS certifications</p>
+                  <p class="class-hu">ITS tanúsítványok</p>
+                </div>
                 <li class="cert">
                   <div class="cert-top">
                     <button class="toggle-btn">▼</button>
@@ -336,7 +349,17 @@
                     </a>
                   </div>
                   <div class="cert-description">
-                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                    <h3>Kapcsolódó területek és kompetenciák:</h3>
+                    <ul>
+                      <li>Alapvető tanúsítási és megfelelőségi ismeretek</li>
+                      <li>Kiberbiztonság (Cybersecurity)</li>
+                      <li>EC-Council ismeretek alapjai</li>
+                      <li>Etikus hackelés (Ethical Hacking, Hacking)</li>
+                      <li>Információbiztonság (Information Security)</li>
+                      <li>
+                        Biztonsági elemzői alapismeretek (Security Analyst)
+                      </li>
+                    </ul>
                   </div>
                 </li>
 
@@ -357,7 +380,22 @@
                   </div>
 
                   <div class="cert-description">
-                    <p>Szöveg</p>
+                    <h3>Kapcsolódó területek és kompetenciák:</h3>
+                    <ul>
+                      <li>
+                        Alapvető algoritmusok és vezérlési szerkezetek
+                        alkalmazása Javaban
+                      </li>
+                      <li>
+                        Objektumorientált programozás (OOP) alapelvei és
+                        gyakorlati alkalmazása
+                      </li>
+                      <li>
+                        Osztályok, objektumok, öröklődés, polimorfizmus és
+                        enkapszuláció használata
+                      </li>
+                      <li>Java kód írása, hibakeresése és javítása</li>
+                    </ul>
                   </div>
                 </li>
                 <li class="cert">
@@ -384,7 +422,7 @@
                 </li>
                 <li class="cert">
                   <div class="cert-top">
-                    <button class="toggle-btn">▼</button>
+                    <button class="toggle-btn" cla>▼</button>
                     <a
                       href="https://www.credly.com/badges/62b83b5e-d5a6-41a8-9341-c8596ebd4a7f/public_url"
                       class="cert-link"
@@ -404,6 +442,17 @@
                 </li>
               </div>
               <div class="Microsoft">
+                <div class="cert-top" id="Microsoft">
+                  <button class="toggle-btn main-button">▼</button>
+                  <img
+                    src="./images/microsoft.png"
+                    alt="Microsoft badge"
+                    title="Microsoft"
+                    class="cert-image"
+                  />
+                  <p class="class-en">Microsoft certifications</p>
+                  <p class="class-hu">Microsoft tanúsítványok</p>
+                </div>
                 <li class="cert">
                   <div class="cert-top">
                     <button class="toggle-btn">▼</button>
@@ -473,6 +522,17 @@
                 </li>
               </div>
               <div class="NVIDIA">
+                <div class="cert-top" id="NVIDIA">
+                  <button class="toggle-btn main-button">▼</button>
+                  <img
+                    src="./images/nvidia.png"
+                    alt="NVIDIA badge"
+                    title="NVIDIA"
+                    class="cert-image"
+                  />
+                  <p class="class-en">NVIDIA certifications</p>
+                  <p class="class-hu">NVIDIA tanúsítványok</p>
+                </div>
                 <li class="cert">
                   <div class="cert-top">
                     <button class="toggle-btn">▼</button>
@@ -488,6 +548,116 @@
                       />
                       <p class="cert-text">
                         NVIDIA - Fundamentals of Deep Learning
+                      </p>
+                    </a>
+                  </div>
+                  <div class="cert-description">
+                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://learn.nvidia.com/certificates?id=y9tMp-XIR6amA4C3TxzhEw"
+                      class="cert-link"
+                    >
+                      <img
+                        src="./images/nvidia.png"
+                        alt="NVIDIA badge"
+                        title="NVIDIA - Computer Vision for Industrial Inspection"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        NVIDIA - Computer Vision for Industrial Inspection
+                      </p>
+                    </a>
+                  </div>
+                  <div class="cert-description">
+                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://learn.nvidia.com/certificates?id=X2-A6vrERs6LP9rDM9pX5w"
+                      class="cert-link"
+                    >
+                      <img
+                        src="./images/nvidia.png"
+                        alt="NVIDIA badge"
+                        title="NVIDIA - Fundamentals of Accelerated Data Science"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        NVIDIA - Fundamentals of Accelerated Data Science
+                      </p>
+                    </a>
+                  </div>
+                  <div class="cert-description">
+                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://learn.nvidia.com/certificates?id=hjr_7MF4QViIl8ACBmunQQ"
+                      class="cert-link"
+                    >
+                      <img
+                        src="./images/nvidia.png"
+                        alt="NVIDIA badge"
+                        title="NVIDIA - Applications of AI for Predictive Maintenance"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        NVIDIA - Applications of AI for Predictive Maintenance
+                      </p>
+                    </a>
+                  </div>
+                  <div class="cert-description">
+                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://learn.nvidia.com/certificates?id=QeDVVCHQSqWACOOtiOkDoQ"
+                      class="cert-link"
+                    >
+                      <img
+                        src="./images/nvidia.png"
+                        alt="NVIDIA badge"
+                        title="NVIDIA - Applications of AI for Anomaly Detection"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        NVIDIA - Applications of AI for Anomaly Detection
+                      </p>
+                    </a>
+                  </div>
+                  <div class="cert-description">
+                    <p>Ez a rész lenyílik, amikor kattintasz a gombra.</p>
+                  </div>
+                </li>
+                <li class="cert">
+                  <div class="cert-top">
+                    <button class="toggle-btn">▼</button>
+                    <a
+                      href="https://learn.nvidia.com/certificates?id=JH0usVvpQtGyzrOxI90A_A"
+                      class="cert-link"
+                    >
+                      <img
+                        src="./images/nvidia.png"
+                        alt="NVIDIA badge"
+                        title="NVIDIA - Accelerating Data Engineering Pipelines"
+                        class="cert-image"
+                      />
+                      <p class="cert-text">
+                        NVIDIA - Accelerating Data Engineering Pipelines
                       </p>
                     </a>
                   </div>
