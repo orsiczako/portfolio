@@ -143,28 +143,49 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function handleInteraction(event) {
-  const touch = event.touches ? event.touches[0] : event;
-  createRipple(touch.clientX, touch.clientY);
-}
+document.addEventListener("DOMContentLoaded", function () {
+  // Kiválasztja az összes olyan szekciót, ahol lehet tanúsítványokat lenyitni
+  document.querySelectorAll(".NVIDIA, .ITS.Microsoft").forEach((section) => {
+    const mainToggleBtn = section.querySelector(".toggle-btn"); // Fő lenyitó gomb
+    const certs = section.querySelectorAll(".cert");
 
-document.body.addEventListener("click", handleInteraction);
-document.body.addEventListener("touchstart", handleInteraction);
+    // Alapból elrejti a tanúsítványokat
+    certs.forEach((cert) => (cert.style.display = "none"));
 
-document.querySelectorAll(".toggle-btn").forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const description =
-      this.closest(".cert").querySelector(".cert-description");
+    // Ha a fő gombra kattintanak, megjelennek vagy eltűnnek a certifikátok
+    mainToggleBtn.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const isHidden = certs[0].style.display === "none";
+      certs.forEach((cert) => {
+        cert.style.display = isHidden ? "block" : "none";
+      });
 
-    if (description) {
-      description.classList.toggle("show-description");
-
-      this.style.transform = description.classList.contains("show-description")
+      // Nyíl forgatása
+      mainToggleBtn.style.transform = isHidden
         ? "rotate(180deg)"
         : "rotate(0deg)";
-    }
+    });
+  });
+
+  // Minden egyes certifikát lenyíló gombja külön működik
+  document.querySelectorAll(".cert .toggle-btn").forEach((btn) => {
+    btn.addEventListener("click", function (event) {
+      event.stopPropagation(); // Ne zavarja az NVIDIA vagy ITS.Microsoft div működését
+      const description =
+        this.closest(".cert")?.querySelector(".cert-description");
+
+      if (description) {
+        description.classList.toggle("show-description");
+        this.style.transform = description.classList.contains(
+          "show-description"
+        )
+          ? "rotate(180deg)"
+          : "rotate(0deg)";
+      }
+    });
   });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   // Válaszd ki az összes EN és HU gombot
   const enButtons = document.querySelectorAll("#EN");
