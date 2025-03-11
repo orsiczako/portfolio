@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Kiválasztja az összes olyan szekciót, ahol lehet tanúsítványokat lenyitni
-  document.querySelectorAll(".NVIDIA, .ITS.Microsoft").forEach((section) => {
+  document.querySelectorAll(".NVIDIA, .ITS,.Microsoft").forEach((section) => {
     const mainToggleBtn = section.querySelector(".toggle-btn"); // Fő lenyitó gomb
     const certs = section.querySelectorAll(".cert");
 
